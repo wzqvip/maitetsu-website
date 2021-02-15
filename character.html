@@ -1,0 +1,1553 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        登场人物 | 「爱上火车 - PURE STATION -」中文官方网站 | Lose / HIKARI FIELD
+    </title>
+    <meta name="description" content="「爱上火车 - PURE STATION -」中文官方网站 | Lose / HIKARI FIELD">
+    <meta name="keywords" content="Lose,まいてつ -PURE STATION-,ものべの,ゴスデリ,ADV,デジタルノベル,美少女,爱上火车 -PURE STATION-,HIKARI FIELD">
+    <meta name="viewport" content="width=1000">
+    <link href="normalize.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="animate.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="perfect-scrollbar.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/perfect-scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="jquery.bxslider.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="slick.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-theme.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/slick/slick-theme.css">
+    <link rel="stylesheet" href="jquery.fancybox.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/jquery.fancybox.css" media="(min-width:1001px)">
+    <link rel="stylesheet" href="jquery.fancybox-sp.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/jquery.fancybox-sp.css" media="(max-width:1000px)">
+    <link rel="stylesheet" href="style.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/style.css" media="(min-width:1001px)">
+    <link rel="stylesheet" href="style-resp.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/style-resp.css" media="(max-width:1000px)">
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="html5shiv.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="DD_belatedPNG_0.0.7a.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/DD_belatedPNG_0.0.7a.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('img, .transparent');
+    </script>
+    <![endif]-->
+
+    <script type="text/javascript" src="jquery.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var agent = navigator.userAgent;
+
+            if (agent.search(/iPhone/) != -1) {
+
+                $(function () {
+                    $('#loader').css('display', 'none');
+                    $('#primary').css('display', 'block');
+                });
+
+            } else if (agent.search(/iPad/) != -1) {
+
+                $(function () {
+                    $('#loader').css('display', 'none');
+                    $('#primary').css('display', 'block');
+                });
+
+            } else if (agent.search(/Android/) != -1) {
+
+                $(function () {
+                    $('#loader').css('display', 'none');
+                    $('#primary').css('display', 'block');
+                });
+
+            } else {
+
+                if (document.referrer.indexOf("damm") != -1) { //リファラにアドレスが含まれているか。
+
+                    // ２度目以降の訪問時の処理
+                    $(function () {
+                        $('#loader').css('display', 'none');
+                        $('#primary').css('display', 'block');
+                    });
+
+                } else {
+
+                    // 初回訪問時の処理
+
+                    $(function () {
+                        Array.prototype.remove = function (element) {
+                            for (var i = 0; i < this.length; i++)
+                                if (this[i] == element) this.splice(i, 1);
+                        };
+                        // プレロード関数
+                        function preload(images, progress) {
+                            var total = images.length;
+                            $(images).each(function () {
+                                var src = this;
+                                $('<img/>')
+                                    .attr('src', src)
+                                    .load(function () {
+                                        images.remove(src);
+                                        progress(total, total - images.length);
+                                    });
+                            });
+                        }
+                        // 画像をプリロード
+                        preload([
+                            'name.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name.png*/, 'back.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back.jpg*/, 'stand01.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01.png*/,
+                            'thum01.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum01.png*/, 'name-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-1.png*/, 'back-1.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-1.jpg*/, 'stand01-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-1.png*/,
+                            'stand06.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06.png*/,
+                            'stand07.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07.png*/,
+                            'thum02.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum02.png*/, 'name-2.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-2.png*/, 'back-2.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-2.jpg*/, 'stand01-3.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-3.png*/,
+                            'stand06-2.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-2.png*/,
+                            'stand07-2.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-2.png*/,
+                            'stand08.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand08.png*/,
+                            'stand09.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand09.png*/,
+                            'stand10.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand10.png*/,
+                            'stand11.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand11.png*/,
+                            'thum03.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum03.png*/, 'name-3.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-3.png*/, 'back-3.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-3.jpg*/, 'stand01-5.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-5.png*/,
+                            'stand06-4.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-4.png*/,
+                            'stand07-4.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-4.png*/,
+                            'stand08-2.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand08-2.png*/,
+                            'stand09-2.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand09-2.png*/,
+                            'stand10-2.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand10-2.png*/,
+                            'stand11-2.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand11-2.png*/,
+                            'thum04.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum04.png*/, 'name-4.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-4.png*/, 'back-4.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-4.jpg*/, 'stand01-7.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-7.png*/,
+                            'thum05.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum05.png*/, 'name-5.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-5.png*/, 'back-5.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-5.jpg*/, 'stand01-9.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-9.png*/,
+                            'stand07-6.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-6.png*/,
+                            'thum06.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum06.png*/, 'name-6.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-6.png*/, 'back-6.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-6.jpg*/, 'stand01-11.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-11.png*/,
+                            'stand06-8.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-8.png*/,
+                            'thum07.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum07.png*/, 'name-7.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-7.png*/, 'back-7.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-7.jpg*/, 'stand01-13.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-13.png*/,
+                            'stand06-10.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-10.png*/,
+                            'stand07-8.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-8.png*/,
+                            'stand08-4.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand08-4.png*/,
+                            'stand09-4.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand09-4.png*/,
+                            'stand10-4.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand10-4.png*/,
+                            'thum08.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum08.png*/, 'name-8.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-8.png*/, 'back-8.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-8.jpg*/, 'stand01-15.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-15.png*/,
+                            'stand06-12.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-12.png*/,
+                            'stand07-10.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-10.png*/,
+                            'stand08-6.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand08-6.png*/,
+                            'stand09-6.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand09-6.png*/,
+                            'thum09.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum09.png*/, 'name-9.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-9.png*/, 'back-9.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-9.jpg*/, 'thum10.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum10.png*/, 'name-10.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-10.png*/, 'back-10.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-10.jpg*/, 'stand01-17.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-17.png*/,
+                            'thum11.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum11.png*/, 'name-11.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-11.png*/, 'back-11.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-11.jpg*/, 'stand01-18.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-18.png*/,
+                            'thum12.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum12.png*/, 'name-12.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-12.png*/, 'back-12.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-12.jpg*/, 'stand01-19.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-19.png*/,
+                            'thum13.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum13.png*/, 'name-13.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-13.png*/, 'back-13.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-13.jpg*/, 'stand01-20.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-20.png*/,
+                            'thum14.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum14.png*/, 'name-14.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-14.png*/, 'back-14.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-14.jpg*/, 'stand01-21.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-21.png*/,
+                            'thum15.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum15.png*/, 'name-15.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-15.png*/, 'back-15.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-15.jpg*/, 'stand01-22.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-22.png*/,
+                            'thum16.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum16.png*/, 'name-16.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-16.png*/, 'back-16.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-16.jpg*/, 'stand01-23.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-23.png*/,
+                            'thum17.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum17.png*/, 'name-17.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-17.png*/, 'back-17.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-17.jpg*/, 'thum18.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum18.png*/, 'name-18.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/name-18.png*/, 'back-18.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/back-18.jpg*/, 'thum19.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum19.png*/,], function (total, loaded) {
+                                if (loaded >= total) {	// すべて読み込んだ
+                                    $('#loader').fadeOut('fast', function () {
+                                        $('#primary').fadeIn('fast');
+
+                                    });
+
+                                } else {	// 読み込み途中
+                                    var percent = Math.ceil(100 * loaded / total);
+                                    $('#load-text').html(percent + '%');
+                                    $('#bar').css('width', percent + '%');
+                                }
+                            });
+
+                    });
+
+
+                };
+
+            }
+        });
+    </script>
+    <script src="smoothscroll.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/smoothscroll.js"></script>
+    <script src="smartrollover.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/smartrollover.js"></script>
+    <script src="masonry.pkgd.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/masonry.pkgd.min.js"></script>
+    <script src="perfect-scrollbar.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/perfect-scrollbar.js"></script>
+    <script src="slick.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/slick/slick.min.js"></script>
+    <script src="jquery.fancybox.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/jquery.fancybox.js"></script>
+    <script src="jquery.bxslider.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/jquery.bxslider.min.js"></script>
+    <script src="wow.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/wow.min.js"></script>
+    <script src="audio.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/audiojs/audio.min.js"></script>
+    <script>new WOW().init();</script>
+    <script src="character.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/character.js" type="text/javascript"></script>
+
+    <script src="expression.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/expression.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+</head>
+
+<body id="subpage">
+
+    <a name="#topback"></a>
+
+    <div id="loader">
+        <table width="100%" height="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="middle" align="center">
+                    <img src="load-logo01.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-logo01.png" class="wow bounceInDown" data-wow-delay="0s">
+                    <img src="load-logo02.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-logo02.png" class="wow bounceInDown" data-wow-delay="0.1s">
+                    <img src="load-logo03.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-logo03.png" class="wow bounceInDown" data-wow-delay="0.2s">
+                    <img src="load-logo04.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-logo04.png" class="wow bounceInDown" data-wow-delay="0.3s">
+                    <div id="bar"></div>
+                    <img src="load-text.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-text.png">
+                    <br>
+                    <span id="load-text">0 %</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="primary">
+
+        <article>
+
+            <div class="navi-open"></div>
+            <nav>
+                <ul>
+                    <li class="navi01">
+                        <a href="index.html" tppabs="https://hikarifield.co.jp/purestation/index.html"></a>
+                    </li>
+                    <li class="navi02">
+                        <a href="story.html" tppabs="https://hikarifield.co.jp/purestation/story.html"></a>
+                    </li>
+                    <li class="navi03">
+                        <a href="character.html" tppabs="https://hikarifield.co.jp/purestation/character.html" class="active"></a>
+                    </li>
+                    <li class="navi04">
+                        <a href="gallery.html" tppabs="https://hikarifield.co.jp/purestation/gallery.html"></a>
+                    </li>
+                    <li class="navi05">
+                        <a href="world.html" tppabs="https://hikarifield.co.jp/purestation/world.html"></a>
+                    </li>
+                    <li class="navi06">
+                        <a href="download.html" tppabs="https://hikarifield.co.jp/purestation/download.html"></a>
+                    </li>
+                    <li class="navi07">
+                        <a href="products.html" tppabs="https://hikarifield.co.jp/purestation/products.html"></a>
+                    </li>
+                </ul>
+            </nav>
+            <section id="mainvisual">
+
+                <div id="character-thum-primary">
+                    <div id="character-thum-overflow">
+                        <div id="character-thum">
+                            <ul class="character-thum">
+
+                                <li>
+                                    <a href="#" data-slide-index="0">
+                                        <img src="thum01.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum01.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="1">
+                                        <img src="thum02.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum02.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="2">
+                                        <img src="thum03.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum03.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="3">
+                                        <img src="thum04.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum04.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="4">
+                                        <img src="thum05.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum05.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="5">
+                                        <img src="thum06.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum06.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="6">
+                                        <img src="thum07.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum07.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="7">
+                                        <img src="thum08.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum08.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="8">
+                                        <img src="thum09.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum09.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="9">
+                                        <img src="thum10.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum10.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="10">
+                                        <img src="thum11.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum11.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="11">
+                                        <img src="thum12.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum12.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="12">
+                                        <img src="thum13.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum13.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="13">
+                                        <img src="thum14.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum14.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="14">
+                                        <img src="thum15.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum15.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="15">
+                                        <img src="thum16.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum16.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="16">
+                                        <img src="thum17.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum17.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="17">
+                                        <img src="thum18.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum18.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-slide-index="18">
+                                        <img src="thum19.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/thum19.png">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="prevPage"></div>
+                        <div class="nextPage"></div>
+                    </div>
+                </div>
+
+                <div class="bxslider">
+
+
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character" id="soutetsu" style=" background-image:url(wp-content/uploads/2016/07/back.jpg);">
+
+                        <style>
+                            #soutetsu .stand-image.stand1 {
+                                background-image: url("stand01.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01.png*/;
+                            }
+                        </style>
+
+
+                        <div class="character-comment">
+                            <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name.png);"></div>
+
+                            <div class="main-detail">
+                                大废线时代末期发生的铁路事故的受害者。因在事故中失去了所有的家人，被右田家收养成为了养子。原本因事故而迷失了人生目标，但在确立了『向右田家报恩』这一新目标后，才逐渐从事故中走出，恢复到能够正常生活。然而也因此变得几乎不会显露出强烈的情感，往好说就是极端理性，往坏说就是没人情味儿。
+                                为在空凝机工厂落户前加以阻止，回到了因就读大学而离开的御一夜。却因意外唤醒了八六，不得不直面夺走了自己家人的铁路。
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel main-character" id="hachiroku" style=" background-image:url(wp-content/uploads/2016/07/back-1.jpg);">
+                        <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-1.png);"></div>
+                        <style>
+                            #hachiroku .stand-image.stand1 {
+                                background-image: url("stand01-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-1.png*/;
+                            }
+
+                            #hachiroku .stand-image.stand2 {
+                                background-image: url("stand06.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06.png*/;
+                            }
+
+                            #hachiroku .stand-image.stand3 {
+                                background-image: url("stand07.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01.mp3">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample02.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample02.mp3">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample03.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample03.mp3">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample04.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample04.mp3">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample05.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample05.mp3">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample06.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample06.mp3">6</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample07.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample07.mp3">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample08.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample08.mp3">8</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+
+                            <div class="main-comment">
+                                公元1914年3月8日——
+                                <br> 在8620型首车竣工前一个月左右，我出厂了
+                            </div>
+
+                            <div class="main-detail">
+                                前帝国铁路8620型蒸汽机车首车8620专用铁路人偶。
+                                <br> 在帝国铁路公司即将解体时，与8620一同被收购并运至御一夜，而后长眠至今。
+                                <br> 有着无愧于首车铁路人偶一职的能力、才智、教养、气度，堪称大和抚子的典范。
+                                <br> 然而在苏醒后，她却为性能的显著下降所苦，甚至暗自哭泣。
+                                <br> 可除双铁外，并没有人见到过八六如此落魄的样子。人前的八六，永远是利落果断自信满满，总是交出完美成果，是最优秀的铁路人偶。
+                            </div>
+                            <div class="option-box">
+                                <div>生日
+                                    <span> / 3月8日</span>　身高
+                                    <span>/ 124cm</span>　体重
+                                    <span>/ 20kg</span>　三围
+                                    <span>/ 57.43.59</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+                        <div class="stand-button">
+
+                            <div class="stand-button-cate01">
+                                <div class="chg-button">
+                                    <a href="#" class="stand1">1</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand2">2</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand3">3</a>
+                                </div>
+                                <div class="chg-button stand-all">
+                                    <a href="hachiroku.html" tppabs="https://hikarifield.co.jp/purestation/hachiroku.html" class="various" data-fancybox-type="iframe" data-fancybox-width="500" data-fancybox-height="800">全身显示</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div class="stand-button-cate02">
+                                <div class="chg-button">
+                                    <a href="02.html" tppabs="https://hikarifield.co.jp/purestation/emote/02.html" class="various fancybox.iframe" data-fancybox-width="800" data-fancybox-height="450">0</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="03.html" tppabs="https://hikarifield.co.jp/purestation/emote/03.html" class="various fancybox.iframe" data-fancybox-width="800" data-fancybox-height="450">1</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div style="clear:both;"></div>
+                        </div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel main-character" id="hibiki" style=" background-image:url(wp-content/uploads/2016/07/back-2.jpg);">
+                        <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-2.png);"></div>
+                        <style>
+                            #hibiki .stand-image.stand1 {
+                                background-image: url("stand01-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-3.png*/;
+                            }
+
+                            #hibiki .stand-image.stand2 {
+                                background-image: url("stand06-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-2.png*/;
+                            }
+
+                            #hibiki .stand-image.stand3 {
+                                background-image: url("stand07-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-2.png*/;
+                            }
+
+                            #hibiki .stand-image.stand4 {
+                                background-image: url("stand08.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand08.png*/;
+                            }
+
+                            #hibiki .stand-image.stand5 {
+                                background-image: url("stand09.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand09.png*/;
+                            }
+
+                            #hibiki .stand-image.stand6 {
+                                background-image: url("stand10.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand10.png*/;
+                            }
+
+                            #hibiki .stand-image.stand7 {
+                                background-image: url("stand11.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand11.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-1.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-1.mp3">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample02-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample02-1.mp3">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample03-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample03-1.mp3">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample04-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample04-1.mp3">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample05-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample05-1.mp3">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample06-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample06-1.mp3">6</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample07-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample07-1.mp3">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample08-1.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample08-1.mp3">8</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+
+                            <div class="main-comment">
+                                我和一位很厉害的画家同一天生日哦？
+                                <br> 哎，你问是谁啊……去查查不就知道了嘛
+                            </div>
+
+                            <div class="main-detail">
+                                主人公右田双铁的继妹。非常喜欢画画，继而将这份热情投入到了绘制御一夜室内的看板与彩绘地图的工作中。
+                                <br> 性格正直而乐观。非常善于发现他人与事物的优点。
+                                <br> 因自觉逊于太过精明强干的姐姐而压抑着对绘画的喜爱，而在双铁「热爱绘画有何不可」的鼓励下敞开了心扉，进而敬爱着双铁。同时，她也逐渐意识到自己对双铁除了敬爱，还混有别样的感情。
+                                <br> 她为此深感羞涩纠结，过着无法坦率地直面双铁，心意难抒的日子。
+                            </div>
+                            <div class="option-box">
+                                <div>生日
+                                    <span> / 10月25日</span>　身高
+                                    <span>/ 148cm</span>　体重
+                                    <span>/ 40kg</span>　三围
+                                    <span>/ 76.54.78</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+                        <div class="stand-button">
+
+                            <div class="stand-button-cate01">
+                                <div class="chg-button">
+                                    <a href="#" class="stand1">1</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand2">2</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand3">3</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand4">4</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand5">5</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand6">6</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand7">7</a>
+                                </div>
+                                <div class="chg-button stand-all">
+                                    <a href="hibiki.html" tppabs="https://hikarifield.co.jp/purestation/hibiki.html" class="various" data-fancybox-type="iframe" data-fancybox-width="500" data-fancybox-height="800">全身显示</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div class="stand-button-cate02">
+                                <div class="chg-button">
+                                    <a href="07.html" tppabs="https://hikarifield.co.jp/purestation/emote/07.html" class="various fancybox.iframe" data-fancybox-width="800" data-fancybox-height="450">0</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="08.html" tppabs="https://hikarifield.co.jp/purestation/emote/08.html" class="various fancybox.iframe" data-fancybox-width="800" data-fancybox-height="450">1</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div style="clear:both;"></div>
+                        </div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel main-character" id="paulette" style=" background-image:url(wp-content/uploads/2016/07/back-3.jpg);">
+                        <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-3.png);"></div>
+                        <style>
+                            #paulette .stand-image.stand1 {
+                                background-image: url("stand01-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-5.png*/;
+                            }
+
+                            #paulette .stand-image.stand2 {
+                                background-image: url("stand06-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-4.png*/;
+                            }
+
+                            #paulette .stand-image.stand3 {
+                                background-image: url("stand07-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-4.png*/;
+                            }
+
+                            #paulette .stand-image.stand4 {
+                                background-image: url("stand08-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand08-2.png*/;
+                            }
+
+                            #paulette .stand-image.stand5 {
+                                background-image: url("stand09-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand09-2.png*/;
+                            }
+
+                            #paulette .stand-image.stand6 {
+                                background-image: url("stand10-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand10-2.png*/;
+                            }
+
+                            #paulette .stand-image.stand7 {
+                                background-image: url("stand11-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand11-2.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-2.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-2.mp3">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample02-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample02-2.mp3">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample03-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample03-2.mp3">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample04-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample04-2.mp3">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample05-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample05-2.mp3">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample06-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample06-2.mp3">6</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample07-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample07-2.mp3">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample08-2.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample08-2.mp3">8</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+
+                            <div class="main-comment">
+                                没错！就是这样！那美丽的红砖仓！
+                                <br> 我和日本的骄傲——帝都中央站，是同一天生日哦
+                            </div>
+
+                            <div class="main-detail">
+                                继承亡父的遗志，拉起了反对空凝机工厂落户御一夜的大旗的御一夜市年轻市长，同时兼任着御一夜铁路股份公司的社长。
+                                <br> 她还是KiHa07S的驾驶员，与其专用铁路人偶玲奈的关系亲密得如同亲姊妹。
+                                <br> 非常喜欢铁路，被问起铁路的事情就会滔滔不绝讲个没完。
+                                <br> 责任感非常强，有时甚至要被责任感压垮，不过总是会给玲奈那悠然的性格拉回来。
+                                <br> 认为双铁非常值得依赖，故而拼命克制自己不要过度依赖他。算是容易吃亏的性格。
+                            </div>
+                            <div class="option-box">
+                                <div>生日
+                                    <span> / 12月18日</span>　身高
+                                    <span>/ 158cm</span>　体重
+                                    <span>/ 46kg</span>　三围
+                                    <span>/ 84.59.83</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+                        <div class="stand-button">
+
+                            <div class="stand-button-cate01">
+                                <div class="chg-button">
+                                    <a href="#" class="stand1">1</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand2">2</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand3">3</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand4">4</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand5">5</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand6">6</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand7">7</a>
+                                </div>
+                                <div class="chg-button stand-all">
+                                    <a href="paulette.html" tppabs="https://hikarifield.co.jp/purestation/paulette.html" class="various" data-fancybox-type="iframe" data-fancybox-width="500" data-fancybox-height="800">全身显示</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div class="stand-button-cate02">
+                                <div class="chg-button">
+                                    <a href="05.html" tppabs="https://hikarifield.co.jp/purestation/emote/05.html" class="various fancybox.iframe" data-fancybox-width="800" data-fancybox-height="450">0</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="06.html" tppabs="https://hikarifield.co.jp/purestation/emote/06.html" class="various fancybox.iframe" data-fancybox-width="800" data-fancybox-height="450">1</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div style="clear:both;"></div>
+                        </div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel main-character" id="reina" style=" background-image:url(wp-content/uploads/2016/07/back-4.jpg);">
+                        <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-4.png);"></div>
+                        <style>
+                            #reina .stand-image.stand1 {
+                                background-image: url("stand01-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-7.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-3.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-3.mp3">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample02-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample02-3.mp3">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample03-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample03-3.mp3">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample04-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample04-3.mp3">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample05-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample05-3.mp3">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample06-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample06-3.mp3">6</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample07-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample07-3.mp3">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample08-3.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample08-3.mp3">8</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+
+                            <div class="main-comment">
+                                呜呼呼，是3月26日哟
+                                <br> 刚好，和车身是同一天完工的啦
+                            </div>
+
+                            <div class="main-detail">
+                                御一夜铁路KiHa07S专用铁路人偶。
+                                <br> 在铁路人偶中也算偏小的个头、悠然的性格以及略有口齿不清是她令人印象深刻的特征。
+                                <br> 曾在矿山铁路大显身手，又亲眼目睹了其由盛而衰直至被废弃的过程，因而拥有相当丰富的人生阅历。
+                                <br> 对任何事物都抱有好感，不禁让人怀疑世上是否还有她不喜欢的东西，天生擅长撒娇。
+                                <br> 非常受动物和婴儿喜欢，和它们的沟通好到让人不时会觉得她是在和它们交谈。
+                            </div>
+                            <div class="option-box">
+                                <div>生日
+                                    <span> / 3月26日</span>　身高
+                                    <span>/ 113cm</span>　体重
+                                    <span>/ 17kg</span>　三围
+                                    <span>/ 53.42.55</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel main-character" id="makura" style=" background-image:url(wp-content/uploads/2016/07/back-5.jpg);">
+                        <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-5.png);"></div>
+                        <style>
+                            #makura .stand-image.stand1 {
+                                background-image: url("stand01-9.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-9.png*/;
+                            }
+
+                            #makura .stand-image.stand2 {
+                                background-image: url("stand07-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-6.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-4.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-4.mp3">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample02-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample02-4.mp3">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample03-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample03-4.mp3">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample04-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample04-4.mp3">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample05-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample05-4.mp3">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample06-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample06-4.mp3">6</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample07-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample07-4.mp3">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample08-4.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample08-4.mp3">8</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+
+                            <div class="main-comment">
+                                搞啥呀，还要送我礼物吗？
+                                <br> 哈哈，逗你的啦。光有心庆贺就很高兴咧
+                            </div>
+
+                            <div class="main-detail">
+                                御一夜代表性的烧酒作坊——右田一酿酒厂的当家，右田双铁的继姐。
+                                <br> 酿酒的品味自不必说，经营手段也颇为了得，尽管尚不算年长，却是商店会中颇受信赖的人物。
+                                <br> 因双亲常年在外奔波，她成了实质上支撑右田家的主妇，富有包容力。
+                                <br> 初次见面时便被双铁所吸引，然而在注意到妹妹也同样为双铁所吸引后，便一直将这心意珍藏在心底。
+                                <br> 真闇与日日姬所构筑的温馨而平凡的日常，究竟为治愈双铁心灵的伤痛起了多大的作用早已无以言表。
+                            </div>
+                            <div class="option-box">
+                                <div>生日
+                                    <span> / 11月27日</span>　身高
+                                    <span>/ 163cm</span>　体重
+                                    <span>/ 50kg</span>　三围
+                                    <span>/ 92.60.86</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+                        <div class="stand-button">
+
+                            <div class="stand-button-cate01">
+                                <div class="chg-button">
+                                    <a href="#" class="stand1">1</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand2">2</a>
+                                </div>
+                                <div class="chg-button stand-all">
+                                    <a href="makura.html" tppabs="https://hikarifield.co.jp/purestation/makura.html" class="various" data-fancybox-type="iframe" data-fancybox-width="500" data-fancybox-height="800">全身显示</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+
+                            <div style="clear:both;"></div>
+                        </div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel main-character" id="kisaki" style=" background-image:url(wp-content/uploads/2016/07/back-6.jpg);">
+                        <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-6.png);"></div>
+                        <style>
+                            #kisaki .stand-image.stand1 {
+                                background-image: url("stand01-11.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-11.png*/;
+                            }
+
+                            #kisaki .stand-image.stand2 {
+                                background-image: url("stand06-8.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-8.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-5.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-5.mp3">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample02-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample02-5.mp3">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample03-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample03-5.mp3">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample04-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample04-5.mp3">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample05-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample05-5.mp3">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample06-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample06-5.mp3">6</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample07-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample07-5.mp3">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample08-5.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample08-5.mp3">8</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+
+                            <div class="main-comment">
+                                巧合？真的是吗？
+                                <br> 以我老爸的作风，没准是故意安排的也说不定哦？
+                            </div>
+
+                            <div class="main-detail">
+                                隈元银行行长——宝生元忠的独生女，身为在校学生的同时，也担任隈元银行御一夜支行行长一职。
+                                <br> 在学校偶然结识了日日姬并注意到她的绘画才能，便为她创造可以充分发挥才能的环境，是位值得信赖的学姐。
+                                <br> 认为御一夜市若想摆脱经济上的困境除引进空凝机工厂落户外别无他法，并为实现这一目标积极行动。
+                                <br> 意志坚定，重视合理性，现实主义者。
+                                <br> 某种程度上说和双铁有着相近的性格，尽管立场相左，却又非常投机。
+                            </div>
+                            <div class="option-box">
+                                <div>生日
+                                    <span> / 7月1日</span>　身高
+                                    <span>/ 160cm</span>　体重
+                                    <span>/ 47kg</span>　三围
+                                    <span>/ 83.58.85</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+                        <div class="stand-button">
+
+                            <div class="stand-button-cate01">
+                                <div class="chg-button">
+                                    <a href="#" class="stand1">1</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand2">2</a>
+                                </div>
+                                <div class="chg-button stand-all">
+                                    <a href="kisaki.html" tppabs="https://hikarifield.co.jp/purestation/kisaki.html" class="various" data-fancybox-type="iframe" data-fancybox-width="500" data-fancybox-height="800">全身显示</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+
+                            <div style="clear:both;"></div>
+                        </div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel main-character" id="nagi" style=" background-image:url(wp-content/uploads/2016/07/back-7.jpg);">
+                        <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-7.png);"></div>
+                        <style>
+                            #nagi .stand-image.stand1 {
+                                background-image: url("stand01-13.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-13.png*/;
+                            }
+
+                            #nagi .stand-image.stand2 {
+                                background-image: url("stand06-10.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-10.png*/;
+                            }
+
+                            #nagi .stand-image.stand3 {
+                                background-image: url("stand07-8.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-8.png*/;
+                            }
+
+                            #nagi .stand-image.stand4 {
+                                background-image: url("stand08-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand08-4.png*/;
+                            }
+
+                            #nagi .stand-image.stand5 {
+                                background-image: url("stand09-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand09-4.png*/;
+                            }
+
+                            #nagi .stand-image.stand6 {
+                                background-image: url("stand10-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand10-4.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-6.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-6.mp3">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample02-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample02-6.mp3">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample03-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample03-6.mp3">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample04-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample04-6.mp3">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample05-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample05-6.mp3">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample06-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample06-6.mp3">6</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample07-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample07-6.mp3">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample08-6.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample08-6.mp3">8</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+
+                            <div class="main-comment">
+                                晚上可有蛋糕和美食等着呢，
+                                <br> 早上就只吃一碗粥倒也挺好！
+                            </div>
+
+                            <div class="main-detail">
+                                很喜欢剑术练习和深美，对自己的魅力毫不自知的蓑笠锻冶店看板娘。
+                                <br> 声音洪亮活力四射，表里如一的极致，在学校和街坊中都很受喜爱。
+                                <br> 如竹子般直率的性格加上竹节一样空空如也的脑子，非常单纯且武断。
+                                <br> 擅长同时也乐于运动，对于深美掌舵漂流舟的样子很感兴趣，于是就来帮忙，随后两人迅速成为了好朋友。
+                                <br> 对恋爱完全没有兴趣，倒不如说对于自己身为女性都没有一个清醒的认识。
+                            </div>
+                            <div class="option-box">
+                                <div>生日
+                                    <span> / 1月7日</span>　身高
+                                    <span>/ 130cm</span>　体重
+                                    <span>/ 28kg</span>　三围
+                                    <span>/ 62.47.67</div>
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+                        <div class="stand-button">
+
+                            <div class="stand-button-cate01">
+                                <div class="chg-button">
+                                    <a href="#" class="stand1">1</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand2">2</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand3">3</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand4">4</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand5">5</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand6">6</a>
+                                </div>
+                                <div class="chg-button stand-all">
+                                    <a href="nagi.html" tppabs="https://hikarifield.co.jp/purestation/nagi.html" class="various" data-fancybox-type="iframe" data-fancybox-width="500" data-fancybox-height="800">全身显示</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div class="stand-button-cate02">
+                                <div class="chg-button">
+                                    <a href="09.html" tppabs="https://hikarifield.co.jp/purestation/emote/09.html" class="various fancybox.iframe" data-fancybox-width="800" data-fancybox-height="450">0</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div style="clear:both;"></div>
+                        </div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel main-character" id="fukami" style=" background-image:url(wp-content/uploads/2016/07/back-8.jpg);">
+                        <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-8.png);"></div>
+                        <style>
+                            #fukami .stand-image.stand1 {
+                                background-image: url("stand01-15.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-15.png*/;
+                            }
+
+                            #fukami .stand-image.stand2 {
+                                background-image: url("stand06-12.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand06-12.png*/;
+                            }
+
+                            #fukami .stand-image.stand3 {
+                                background-image: url("stand07-10.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand07-10.png*/;
+                            }
+
+                            #fukami .stand-image.stand4 {
+                                background-image: url("stand08-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand08-6.png*/;
+                            }
+
+                            #fukami .stand-image.stand5 {
+                                background-image: url("stand09-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand09-6.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-7.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-7.mp3">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample02-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample02-7.mp3">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample03-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample03-7.mp3">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample04-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample04-7.mp3">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample05-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample05-7.mp3">5</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample06-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample06-7.mp3">6</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample07-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample07-7.mp3">7</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-src="sample08-7.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample08-7.mp3">8</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+
+                            <div class="main-comment">
+                                都说盛夏酷暑，妈妈会很辛苦——
+                                <br> 或许正是因为这样我才这么喜欢这条河吧
+                            </div>
+
+                            <div class="main-detail">
+                                代替体弱多病的母亲，运营着御一夜引以为傲的旅游资源——隈河漂流的，历尽艰辛的少女。
+                                <br> 性格恬静内向，喜爱读书，但因为迫于生计，营业用的话语已是了然于胸。
+                                <br> 相对的，私下里却完全不肯表述自己的意见，若不是有凪代为发声，就只能被别人牵着走。
+                                <br> 故而非常依赖凪，憧憬着她那开朗的性格。
+                                <br> 在酷爱读书习惯的影响下，脑洞是又多又大。
+                                <br> 不时会妄想「小凪要是男孩子的话……」，然后裹着被子在床上打滚。
+                            </div>
+                            <div class="option-box">
+                                <div>生日
+                                    <span> / 8月10日</span>　身高
+                                    <span>/ 143cm</span>　体重
+                                    <span>/ 34kg</span>　三围
+                                    <span>/ 69.52.72</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+                        <div class="stand-button">
+
+                            <div class="stand-button-cate01">
+                                <div class="chg-button">
+                                    <a href="#" class="stand1">1</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand2">2</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand3">3</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand4">4</a>
+                                </div>
+                                <div class="chg-button">
+                                    <a href="#" class="stand5">5</a>
+                                </div>
+                                <div class="chg-button stand-all">
+                                    <a href="fukami.html" tppabs="https://hikarifield.co.jp/purestation/fukami.html" class="various" data-fancybox-type="iframe" data-fancybox-width="500" data-fancybox-height="800">全身显示</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div class="stand-button-cate02">
+                                <div class="chg-button">
+                                    <a href="04.html" tppabs="https://hikarifield.co.jp/purestation/emote/04.html" class="various fancybox.iframe" data-fancybox-width="800" data-fancybox-height="450">0</a>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+
+                            <div style="clear:both;"></div>
+                        </div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character nostand" id="navinavi" style=" background-image:url(wp-content/uploads/2016/07/back-9.jpg);">
+
+                        <style>
+                        </style>
+
+
+                        <div class="character-comment">
+
+
+                            <div class="main-detail">
+                                双铁为搭载于他所拥有的飞行型空凝机上、负责导航与操纵的人工智能——空凝机Navi起名为Navi。Navi可以与双铁进行正常的对话，而且从内容中可以体现出它的才智与人格。尽管如此，Navi仍然坚持自己只是『单纯的物品』而已。以保障双铁的安全为第一要务，可谓极度的过度保护。只要可能，它便会一直跟踪并监视双铁。
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character" id="tororuyu" style=" background-image:url(wp-content/uploads/2016/07/back-10.jpg);">
+
+                        <style>
+                            #tororuyu .stand-image.stand1 {
+                                background-image: url("stand01-17.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-17.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-8.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-8.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-8.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-8.mp3">1</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+                            <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-10.png);"></div>
+
+                            <div class="main-detail">
+                                    直接引用御一夜温泉而开设的公共浴场——登吕流浴场的老板娘。浴场原本是由其丈夫经营，而据说在其丈夫生前，老板娘本是铁路人偶技师。实际上，玲奈出故障的时候也都是到她这里来进行修复的。技师风范，讲话也是直来直去。
+                                </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character" id="mototada" style=" background-image:url(wp-content/uploads/2016/07/back-11.jpg);">
+
+                        <style>
+                            #mototada .stand-image.stand1 {
+                                background-image: url("stand01-18.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-18.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-9.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-9.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-9.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-9.mp3">1</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+                            <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-11.png);"></div>
+
+                            <div class="main-detail">
+                                隈元银行行长，隈元县财经界的代表人物之一。
+                                <br> 运用其不容小觑的影响力，以一人之力将全日本争相拉拢的空凝机工厂，带到了御一夜。
+                                <br> 完全的唯实力论、唯结果论者，虽将女儿宝生稀咲任命为支行行长，却也并非任人唯亲。
+                                <br> 反过来说，只要能够达到目的，世间风评一概不予理会，就是这么自命不凡。他那强烈的个性使得身边的人非敌即友，断难折衷。
+                            </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character" id="minoru" style=" background-image:url(wp-content/uploads/2016/07/back-12.jpg);">
+
+                        <style>
+                            #minoru .stand-image.stand1 {
+                                background-image: url("stand01-19.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-19.png*/;
+                            }
+                        </style>
+
+
+                        <div class="character-comment">
+                            <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-12.png);"></div>
+
+                            <div class="main-detail">
+                                    凪的祖父。蓑笠锻冶店的店主。原本只是锻造一些农具，但在大废线之后，御一夜铁路得到车辆零部件的渠道也大受限制，故而也会尽力接一些锻造零件的活。看上去是个老好人，事实上也很宠孙女，但在工作上却毫不马虎。
+                                </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character" id="akai" style=" background-image:url(wp-content/uploads/2016/07/back-13.jpg);">
+
+                        <style>
+                            #akai .stand-image.stand1 {
+                                background-image: url("stand01-20.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-20.png*/;
+                            }
+                        </style>
+
+
+                        <div class="character-comment">
+                            <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-13.png);"></div>
+
+                            <div class="main-detail">
+                                    御一夜规模最大历史最古老的神社，赤井阿苏神社的宫司。也有传闻称当年曾就职于帝国铁路。性格文静，善于倾听人言。身居此位，常有人向他寻求意见，然而相较于直接给出答案，他更多的是协助来者把候选项整理明晰。
+                                </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character" id="hayase" style=" background-image:url(wp-content/uploads/2016/07/back-14.jpg);">
+
+                        <style>
+                            #hayase .stand-image.stand1 {
+                                background-image: url("stand01-21.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-21.png*/;
+                            }
+                        </style>
+
+
+                        <div class="character-comment">
+                            <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-14.png);"></div>
+
+                            <div class="main-detail">
+                                    深美的祖父。隈河漂流以前的船老大，当地的水土专家。退休后发挥其特长，与兄弟一起从事着御一夜铁路志愿巡线员的工作。人很爽朗。
+                                </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character" id="urakami" style=" background-image:url(wp-content/uploads/2016/07/back-15.jpg);">
+
+                        <style>
+                            #urakami .stand-image.stand1 {
+                                background-image: url("stand01-22.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-22.png*/;
+                            }
+                        </style>
+
+                        <div class="sample-voice wow fadeInRight" data-wow-delay="0.5s">
+                            <audio src="sample01-10.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-10.mp3" preload="auto"></audio>
+                            <ol>
+                                <li>
+                                    <a href="#" data-src="sample01-10.mp3" tppabs="https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/sample01-10.mp3">1</a>
+                                </li>
+                                <div style="clear:both;"></div>
+                            </ol>
+                        </div>
+
+                        <div class="character-comment">
+                            <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-15.png);"></div>
+
+                            <div class="main-detail">
+                                    空凝科技公司员工。主要任务是为空凝机工厂寻找合适的建厂地点。目前派驻御一夜银行，兼任宝生稀咲的秘书。理智且公正。
+                                </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character" id="nagayama" style=" background-image:url(wp-content/uploads/2016/07/back-16.jpg);">
+
+                        <style>
+                            #nagayama .stand-image.stand1 {
+                                background-image: url("stand01-23.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/uploads/2016/07/stand01-23.png*/;
+                            }
+                        </style>
+
+
+                        <div class="character-comment">
+                            <div class="character-name wow fadeInLeft" style="background-image:url(wp-content/uploads/2016/07/name-16.png);"></div>
+
+                            <div class="main-detail">
+                                    古刹永山寺（此寺同时也凭着“幽灵寺”的别称广为人知）的住持夫人。婚前曾是帝国铁路的职员，在餐车上工作。擅长烹饪，为人积极主动且善于变通。
+                                </div>
+                        </div>
+
+                        <div class="stand-image stand1 wow fadeInRight"></div>
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character nostand" id="concon" style="background-position:right; background-image:url(wp-content/uploads/2016/07/back-17.jpg);">
+
+                        <style>
+                        </style>
+
+
+                        <div class="character-comment">
+
+
+                            <div class="main-detail">
+                                在御一夜站附近出没的野生狐狸。很黏人也很招人喜欢。在日日姬和玲奈给它取了名字之后，俨然成了御一夜站的特别站长。
+                                </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                    <!-- キャラクターパネル　start -->
+                    <div class="character-panel sub-character nostand" id="suzume" style="background-position:right; background-image:url(wp-content/uploads/2016/07/back-18.jpg);">
+
+                        <style>
+                        </style>
+
+
+                        <div class="character-comment">
+
+
+                            <div class="main-detail">
+                                似乎是看中蒸汽机车喷出的温暖烟雾而在机车库中筑巢的麻雀群中的头领，有着力压群雀的威严。
+                                <br> 双铁在目击到它急速俯冲叼走空的食物之后，参照著名战斗机飞行员为它取名加藤雀。
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- キャラクターパネル　end -->
+
+                </div>
+
+            </section>
+
+
+
+            <div style="clear:both;"></div>
+
+        </article>
+        <div id="footer">
+
+            <div id="cc">
+                Lose / HIKARI FIELD, Copyright 2018 All rights reserved.
+                <div class="topback" id="page-top">
+                    <a href="#topback" onclick="return false;"></a>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+
+            <div id="footer-contents">
+                <div class="brand-logo">
+                    <a class="lose_logo" href="javascript:if(confirm('http://maitetsucs.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://maitetsucs.com/'" tppabs="http://maitetsucs.com/" target="_blank"></a><a class="hf_logo" href="javascript:if(confirm('http://www.hikarifield.co.jp/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.hikarifield.co.jp/'" tppabs="http://www.hikarifield.co.jp/" target="_blank"></a>
+                </div>
+                <div class="logo">
+                    <a href="index.html" tppabs="https://hikarifield.co.jp/purestation/index.html"></a>
+                </div>
+                <div class="footer-navi">
+                    <a href="index.html" tppabs="https://hikarifield.co.jp/purestation/index.html">首页</a> |
+                    <a href="story.html" tppabs="https://hikarifield.co.jp/purestation/story.html">故事介绍</a> |
+                    <a href="character.html" tppabs="https://hikarifield.co.jp/purestation/character.html">登场人物</a> |
+                    <a href="gallery.html" tppabs="https://hikarifield.co.jp/purestation/gallery.html">游戏画廊</a> |
+                    <a href="world.html" tppabs="https://hikarifield.co.jp/purestation/world.html">世界观</a> |
+                    <a href="download.html" tppabs="https://hikarifield.co.jp/purestation/download.html">相关下载</a> |
+                    <a href="products.html" tppabs="https://hikarifield.co.jp/purestation/products.html">产品信息</a>
+                </div>
+                <div class="footer-spec">
+                    爱上火车
+                    <span>- PURE STATION -</span>
+                    <br> 剧本：进行豹　原画：cura　主题歌：中惠光城
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+        <!-- counter -->
+        <div style="display:none;">
+            <script type="text/javascript" src="cnzz-1.js" tppabs="http://hikarifield.co.jp/cnzz.js"></script>    
+        </div>
+
+</body>
+
+</html>

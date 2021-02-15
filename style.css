@@ -1,0 +1,1874 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*--------------------------------------
+　base style
+---------------------------------------*/
+
+body{	
+color:#000000;
+font-size:13px;
+margin:0;
+height:100%;
+position:relative;
+font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+body > #primary {
+height: auto;
+}
+
+a:link {color:#0c308e; text-decoration:underline;}
+a:visited {color:#0c308e; text-decoration:underline;}
+a:hover {color:#dd3119; text-decoration:underline;}
+
+img{
+border:0;
+vertical-align: bottom;
+}
+
+#loader {
+	position:fixed;
+	background-color:#ffffff;
+	background-image:url("load-back.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-back.jpg*/;
+	background-repeat:repeat-x;
+	background-position:bottom;
+	margin: 0 auto;
+	display:block;
+	text-align:center;
+	width:100%;
+	height:100%;
+	text-align: center;
+	font-size: 18px;
+	color:#be121b;
+	line-height:3;
+	font-weight:bold;
+	font-family : 'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3', 'ＭＳ Ｐ明朝', 'Times', 'Times New Roman', serif ;
+	font-size:24px;
+	z-index:999;
+	}
+
+#bar {
+	height:1px;
+	background-color:#b31919;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:4px;
+	margin-top:34px;
+}
+
+/*--------------------------------------
+　Expression
+---------------------------------------*/
+
+.clear { clear:both; }
+.under { margin-bottom:20px; }
+.right { float:right;}
+.left { float:left;}
+.floatside {overflow:hidden;}
+
+.ro img:hover,.ro:hover {
+opacity:0.8;
+filter: alpha(opacity=80);
+-ms-filter: "alpha( opacity=80 )";
+}
+
+
+/*--------------------------------------
+　Primary
+---------------------------------------*/
+
+#primary {
+	width:100%;
+	height:100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+article {
+	width:100%;
+	height:960px;
+	overflow:hidden;
+}
+
+.long-contents article {
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+
+/*--------------------------------------
+　MainVisual
+---------------------------------------*/
+
+#mainvisual {
+	width:100%;
+	height:926px;
+}
+
+#subpage #mainvisual {
+	width:100%;
+	height:auto;
+	min-height:960px;
+}
+
+#absolute-contents {
+	width:100%;
+	height:100%;
+	position:relative;
+	z-index:20;
+}
+
+#absolute-contents .logo-back { background-image:url("logo-back.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/logo-back.png*/; position:absolute; width:251px; height:880px; right:45px; top:0; }
+#absolute-contents .logo { background-image:url("logo.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/logo.png*/; position:absolute; width:153px; height:430px; right:94px; top:46px; }
+#absolute-contents .spec { background-image:url("spec.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/spec.png*/; width:621px; height:204px; position:absolute; right:45px; top:655px; }
+
+#mainvisual .panel {
+	width:100%;
+	height:926px;
+	display:block;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+
+#mainvisual .scene01 { background-image:url("02.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/02.jpg*/; background-size:cover; background-position:center; }
+#mainvisual .scene01 .chara01 { position:absolute; display:block; background-image:url("02_hachiroku.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/02_hachiroku.png*/; width:1191px; height:1222px; top:10px; left:-50px; z-index:1; }
+#mainvisual .scene01 .grass { position:absolute; display:block; background-image:url("02_grass.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/02_grass.png*/; width:1920px; height:935px; bottom:0px; left:0px; z-index:2; }
+#mainvisual .scene01 .flygrass { position:absolute; display:block; background-image:url("02_flygrass.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/02_flygrass.png*/; width:1920px; height:935px; bottom:0px; left:0px; z-index:3; }
+
+/*--------------------------------------
+　Navi
+---------------------------------------*/
+
+nav {
+	width:180px;
+	min-height:1222px;
+	position:fixed;
+	z-index:150;
+	top:-52px;
+	left:0;
+	background-image:url("navi-back.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi-back.png*/;
+	box-shadow: 1px 0px 19px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 1px 0px 19px rgba(0, 0, 0, 0.55);
+    -webkit-box-shadow: 1px 0px 19px rgba(0, 0, 0, 0.55);
+}
+
+.navi-open { display:none; background-image:url("navi00_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi00_off.png*/; width:180px; height:52px; position:fixed; top:0; left:0; z-index:100; }
+.navi-open:hover { background-image:url("navi00_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi00_on.png*/; cursor:pointer; }
+
+nav ul { list-style:none; margin:0; padding:0; margin-top:52px; }
+nav ul li a { width:180px; height:77px ;display:block; }
+
+nav ul li.navi01 a { background-image:url("navi01_off-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi01_off.png*/;}
+nav ul li.navi02 a { background-image:url("navi02_off-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi02_off.png*/;}
+nav ul li.navi03 a { background-image:url("navi03_off-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi03_off.png*/;}
+nav ul li.navi04 a { background-image:url("navi04_off-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi04_off.png*/;}
+nav ul li.navi05 a { background-image:url("navi05_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi05_off.png*/;}
+nav ul li.navi06 a { background-image:url("navi06_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi06_off.png*/;}
+nav ul li.navi07 a { background-image:url("navi07_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi07_off.png*/;}
+
+nav ul li.navi01 a:hover { background-image:url("navi01_on-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi01_on.png*/;}
+nav ul li.navi02 a:hover { background-image:url("navi02_on-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi02_on.png*/;}
+nav ul li.navi03 a:hover { background-image:url("navi03_on-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi03_on.png*/;}
+nav ul li.navi04 a:hover { background-image:url("navi04_on-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi04_on.png*/;}
+nav ul li.navi05 a:hover { background-image:url("navi05_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi05_on.png*/;}
+nav ul li.navi06 a:hover { background-image:url("navi06_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi06_on.png*/;}
+nav ul li.navi07 a:hover { background-image:url("navi07_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi07_on.png*/;}
+
+nav ul li.navi01 a.active { background-image:url("navi01_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi01_active.png*/;}
+nav ul li.navi02 a.active { background-image:url("navi02_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi02_active.png*/;}
+nav ul li.navi03 a.active { background-image:url("navi03_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi03_active.png*/;}
+nav ul li.navi04 a.active { background-image:url("navi04_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi04_active.png*/;}
+nav ul li.navi05 a.active { background-image:url("navi05_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi05_active.png*/;}
+nav ul li.navi06 a.active { background-image:url("navi06_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi06_active.png*/;}
+nav ul li.navi07 a.active { background-image:url("navi07_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi07_active.png*/;}
+
+
+/*--------------------------------------
+　Footer
+---------------------------------------*/
+
+#footer {
+	position:relative;
+	z-index:200;
+	margin-top:-34px;
+}
+
+#footer #cc {
+	background-image:url("cc-back.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/footer/cc-back.png*/;
+	background-repeat:repeat-x;
+	height:49px;
+	position:relative;
+	font-family:"Century Gothic";
+	font-size:14px;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000000;
+	padding-top:65px;
+	text-indent:35px;
+}
+
+#footer #cc #sns {
+	position:absolute;
+	top:60px;
+	right:90px;
+	height:32px;
+	width:100px;
+	text-align:right;
+}
+
+#footer #cc #sns a img {
+	margin-left:4px;
+	margin-right:4px;
+	float:right;
+}
+
+#footer #cc #sns a img:hover {
+	opacity:0.8;
+	filter: alpha(opacity=80);
+	-ms-filter: "alpha( opacity=80 )";
+}
+
+#footer #cc .topback {
+	background-image:url("topback_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/footer/topback_off.png*/;
+	display:block;
+	width:76px;
+	height:80px;
+	position:absolute;
+	top:34px;
+	right:0;
+}
+
+#footer #cc .topback:hover {
+	cursor:pointer;
+	opacity:0.8;
+	filter: alpha(opacity=80);
+	-ms-filter: "alpha( opacity=80 )";
+}
+
+#footer #footer-contents {
+	background-image:url("back.gif")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/footer/back.gif*/;
+	padding-top:40px;
+	padding-bottom:40px;
+	text-align:center;
+}
+
+#footer #footer-contents .logo a {
+	background-image:url("logo-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/footer/logo.png*/;
+	width:277px;
+	height:93px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:30px;
+}
+
+#footer #footer-contents .footer-spec {
+	font-size:14px;
+	font-weight:bold;
+}
+
+#footer #footer-contents .footer-spec span {
+	font-size:11px;
+}
+
+.footer-navi {
+	margin-bottom:15px;
+}
+
+.footer-navi a {
+	color:#be121b;
+}
+
+.brand-logo a.lose_logo {
+	background-image:url("brand-logo.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/footer/brand-logo.png*/;
+	width:133px;
+	height:81px;
+	position:absolute;
+	right:140px;
+	bottom:30px;
+}
+
+.brand-logo a.hf_logo {
+	background-image:url("hf_logo.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/footer/hf_logo.png*/;
+	width:80px;
+	height:80px;
+	position:absolute;
+	right:50px;
+	bottom:30px;
+}
+
+/*--------------------------------------
+　HOME
+---------------------------------------*/
+
+#topics {
+	padding-left:210px;
+	padding-top:0px;
+	position:relative;
+	padding-bottom:50px;
+}
+
+.topics-list {
+	width:211px;
+	height:211px;
+	float:left;
+	border-radius:8px;
+	margin-right:30px;
+	margin-bottom:30px;
+	background-color:#ffffff;
+	color:#ffffff;
+	font-size:13px;
+	overflow:hidden;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.topics-list .comment {
+	position:absolute;
+	width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	background-color: rgba(255,255,255,0.8);
+	color:#333333;
+	left:0;
+	bottom:0;
+	display:block;
+}
+
+.topics-list .comment p {
+	margin:0;
+	padding:0;
+	padding-left:14px;
+	padding-right:14px;
+}
+
+.topics-list .topics-image a {
+	width:211px;
+	height:211px;
+	display:block;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.topics-list.x2 { width:452px; height:211px; }
+.topics-list.x2 .topics-image a { width:452px; height:211px; }
+
+.topics-list.x2x2 { width:452px; height:452px; }
+.topics-list.x2x2 .topics-image a { width:452px; height:452px; }
+
+.topics-list.x3 { width:693px; height:211px; }
+.topics-list.x3 .topics-image a { width:693px; height:211px; }
+
+.topics-list.x3x3 { width:693px; height:693px; }
+.topics-list.x3x3 .topics-image a { width:693px; height:693px; }
+
+.topics-list.noimg {
+	background-image:url("noimage.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/top/noimage.png*/;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:contain;
+}
+
+.topics-list.noimg .comment {
+	background-color:ffffff;
+	text-align:center;
+}
+
+.topics-list .topics-image a:hover {
+	opacity:0.8;
+	filter: alpha(opacity=80);
+	-ms-filter: "alpha( opacity=80 )";
+}
+
+
+/*--------------------------------------
+　STORY
+---------------------------------------*/
+
+#story-navi {
+	position:relative;
+	z-index:10;
+}
+
+#story-navi .navi01 a { display:block; width:208px; height:125px; position:absolute; background-image:url("navi01_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/navi01_off.png*/; top:18px; left:200px;}
+#story-navi .navi02 a { display:block; width:208px; height:125px; position:absolute; background-image:url("navi02_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/navi02_off.png*/; top:18px; left:420px;}
+#story-navi .navi03 a { display:block; width:208px; height:125px; position:absolute; background-image:url("navi03_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/navi03_off.png*/; top:18px; left:640px;}
+#story-navi .navi04 a { display:block; width:208px; height:125px; position:absolute; background-image:url("navi04_off.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/navi04_off.png*/; top:18px; left:860px;}
+
+#story-navi .navi01 a:hover { background-image:url("navi01_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/navi01_on.png*/;}
+#story-navi .navi02 a:hover { background-image:url("navi02_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/navi02_on.png*/;}
+#story-navi .navi03 a:hover { background-image:url("navi03_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/navi03_on.png*/;}
+#story-navi .navi04 a:hover { background-image:url("navi04_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/navi04_on.png*/;}
+
+#story-scene01 { background-image:url("back01.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/back01.jpg*/; width:100%; min-height:966px; background-position:center;}
+#story-scene02 { background-image:url("back02.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/back02.jpg*/; width:100%; min-height:966px; background-position:left top; }
+#story-scene03 { background-image:url("back03.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/back03.jpg*/; width:100%; min-height:966px; background-position:center top; }
+#story-scene04 { background-image:url("back04.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/back04.jpg*/; width:100%; min-height:966px; background-position:center top; }
+
+.story-window {
+	width:100%;
+	padding-top:0px;
+	padding-bottom:20px;
+	position:absolute;
+	bottom:0;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.story-window .story-detail {
+	padding-left:230px;
+	padding-right:50px;
+	padding-top:0px;
+	padding-bottom:30px;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-size:16px;
+	margin-top:-40px;
+	font-weight:bold;
+}
+
+.scene01-comment { background-image:url("scene01-comment.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/scene01-comment.png*/; display:block; width:747px; height:103px; margin-bottom:10px;}
+.scene01-photo01 { background-image:url("scene01-photo01.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/scene01-photo01.png*/; position:absolute; width:358px; height:268px; left:987px; top:-160px; }
+.scene01-photo02 { background-image:url("scene01-photo02.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/scene01-photo02.png*/; position:absolute; width:348px; height:282px; left:1240px; top:-230px; }
+
+.scene02-comment { background-image:url("scene02-comment.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/scene02-comment.png*/; display:block; width:660px; height:76px; margin-bottom:20px;}
+
+.scene03-comment { background-image:url("scene04-comment.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/scene04-comment.png*/; display:block; width:586px; height:114px; margin-bottom:20px;}
+
+.scene04-comment { background-image:url("scene03-comment.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/story/scene03-comment.png*/; display:block; width:651px; height:89px; margin-bottom:20px;}
+
+
+/*--------------------------------------
+　CHARACTER
+---------------------------------------*/
+
+#character-thum-primary {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:143px;
+	overflow:hidden;
+	z-index:130;
+}
+
+#character-thum-overflow {
+	width:109%;
+	margin-left:-250px;
+}
+
+#character-thum {
+	margin-left:500px;
+}
+
+#character-thum ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+#character-thum ul li {
+	float:left;
+	margin-right:1.5px;
+	margin-left:1.5px;
+	transition: 0.2s;
+}
+
+#character-thum ul li:hover {
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	-o-transform: translateY(-10px);
+}
+
+.slick-prev {
+	position:absolute;
+	background:none;
+	background-image:url("left.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/left.png*/;
+	width:45px;
+	height:45px;
+	top:53px;
+	left:-55px;
+	display:block;
+	z-index:100;
+	text-indent:-9999px;
+	border:none;
+}
+
+.slick-next {
+	position:absolute;
+	background:none;
+	background-image:url("right.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/right.png*/;
+	width:45px;
+	height:45px;
+	top:53px;
+	right:-55px;
+	display:block;
+	z-index:100;
+	text-indent:-9999px;
+	border:none;
+}
+
+.prevPage:hover, .nextPage:hover {
+	cursor:pointer;
+}
+
+.prevPage:hover {
+	background-image:url("left_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/left_on.png*/;
+}
+
+.nextPage:hover {
+	background-image:url("right_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/right_on.png*/;
+}
+
+/* 共　　通 ------------------------------------------------------------------------*/
+
+.character-panel.main-character {
+	width:100%;
+	height:960px;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+}
+
+.character-panel.main-character .character-name  {
+	width:800px;
+	height:120px;
+	position:absolute;
+	top:200px;
+	left:228px;
+}
+
+.character-panel.main-character  .character-comment {
+	background-image:url("detail-back.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/detail-back.png*/;
+	width:100%;
+	height:418px;
+	background-repeat:repeat-x;
+	position:absolute;
+	top:332px;
+	left:0;
+}
+
+.stand-button {
+	background-image:url("standbutton-back.gif")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/standbutton-back.gif*/;
+	background-repeat:repeat-x;
+	width:100%;
+	height:100px;
+	position:absolute;
+	top:750px;
+	left:0;
+	box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.80);
+    -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.80);
+}
+
+.main-comment {
+	font-size:28px;
+	color:#da0c0c;
+	font-weight:bold;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	padding-left:230px;
+	padding-top:40px;
+	margin-bottom:10px;
+	text-shadow: 3px 3px 2px #FFFFFF;
+	line-height:38px;
+	width:50%;
+}
+
+.main-detail {
+	font-size:15px;
+	line-height:22px;
+	color:#222222;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	padding-left:230px;
+	width:40%;
+	font-weight:bold;
+}
+
+.option-box {
+	position:absolute;
+	background-image:url("option.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/option.png*/;
+	width:100%;
+	height:47px;
+	left:0;
+	top:371px;
+	padding-left:230px;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	line-height:48px;
+	color:#a11111;
+	text-shadow: 1px 1px 1px #be903f;
+}
+
+.option-box div {
+	position:relative;
+	z-index:1000;
+}
+
+.option-box span {
+	color:#6a3f0b;
+}
+
+@media screen and (max-width: 1400px) {
+
+.character-panel.main-character .character-name  {
+	width:600px;
+	height:90px;
+	position:absolute;
+	top:180px;
+	left:228px;
+	background-size:contain;
+}
+.character-panel.main-character  .character-comment {
+	background-image:url("detail-back.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/detail-back.png*/;
+	width:100%;
+	height:598px;
+	background-repeat:repeat-x;
+	position:absolute;
+	top:332px;
+	left:0;
+}
+
+.stand-button {
+	background-image:url("standbutton-back.gif")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/standbutton-back.gif*/;
+	background-repeat:repeat-x;
+	width:100%;
+	height:100px;
+	position:absolute;
+	top:830px;
+	left:0;
+	z-index:100;
+	box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.80);
+    -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.80);
+    -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.80);
+}
+	
+.main-comment {
+	font-size:25px;
+	color:#da0c0c;
+	font-weight:bold;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	padding-left:230px;
+	padding-top:40px;
+	margin-bottom:20px;
+	text-shadow: 3px 3px 2px #FFFFFF;
+	line-height:30px;
+	width:40%;
+}
+
+.main-detail {
+	font-size:14px;
+	color:#222222;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	padding-left:230px;
+	width:40%;
+}
+
+.option-box {
+	position:absolute;
+	background-image:url("option.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/option.png*/;
+	width:100%;
+	height:47px;
+	left:0;
+	top:450px;
+	padding-left:230px;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	line-height:48px;
+	color:#a11111;
+	text-shadow: 1px 1px 1px #be903f;
+}
+
+.option-box span {
+	color:#6a3f0b;
+}
+
+}
+
+.stand-image {
+	position:absolute;
+	width:780px;
+	height:780px;
+	bottom:0;
+	right:-100px;
+	background-repeat:no-repeat;
+	z-index:100;
+}
+
+@media screen and (max-width: 1400px) {
+	.stand-image {
+		position:absolute;
+		width:780px;
+		height:780px;
+		bottom:0;
+		right:-100px;
+		background-repeat:no-repeat;
+		background-size:contain;
+		z-index:100;
+	}
+	.sub-character .stand-image {
+		position:absolute;
+		width:650px;
+		height:650px;
+		bottom:0;
+		right:-150px;
+		background-repeat:no-repeat;
+		background-size:contain;
+		z-index:100;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.stand-image {
+		position:absolute;
+		width:700px;
+		height:700px;
+		bottom:0;
+		right:-120px;
+		background-repeat:no-repeat;
+		background-size:contain;
+		z-index:100;
+	}
+	.sub-character .stand-image {
+		position:absolute;
+		width:650px;
+		height:650px;
+		bottom:0;
+		right:-150px;
+		background-repeat:no-repeat;
+		background-size:contain;
+		z-index:100;
+	}
+}
+
+.stand-button-cate01 {
+	background-image:url("stand-text01.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/stand-text01.png*/;
+	background-repeat:no-repeat;
+	background-position:left 5px;
+	padding-left:130px;
+	height:40px;
+	margin-left:227px;
+	margin-top:11px;
+	position:relative;
+	z-index:500;
+}
+
+.stand-button-cate02 {
+	background-image:url("stand-text02.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/stand-text02.png*/;
+	background-repeat:no-repeat;
+	background-position:left 5px;
+	padding-left:130px;
+	height:40px;
+	margin-left:227px;
+	margin-top:0px;
+	position:relative;
+	z-index:500;
+}
+
+.chg-button a {
+	display:block;
+	float:left;
+	width:33px;
+	height:33px;
+	background-color:#000000;
+	border:solid 1px #2D2D2D;
+	text-align:center;
+	line-height:35px;
+	margin-right:3px;
+	color:#ffffff;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-size:16px;
+	text-decoration:none;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+.commingsoon {
+	display:block;
+	float:left;
+	width:100px;
+	height:33px;
+	text-align:center;
+	line-height:35px;
+	margin-right:3px;
+	color:#434343;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-size:16px;
+	text-decoration:none;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+.chg-button.stand-all a {
+	width:110px;
+	font-size:15px;
+}
+
+.chg-button a:hover {
+	color:#ffffff;
+	background-color:#920910;
+	border:solid 1px #000000;
+}
+
+.character-panel.main-character .sample-voice {
+	position:absolute;
+	left:405px;
+	top:287px;
+	width:650px;
+	height:30px;
+	z-index:600;
+}
+
+.character-panel.main-character .sample-voice ol {
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	z-index:600;
+}
+
+.character-panel.main-character .sample-voice ol li a {
+	float:left;
+	width:30px;
+	height:30px;
+	background-color:#000000;
+	color:#ffffff;
+	line-height:30px;
+	font-size:18px;
+	text-align:center;
+	margin-right:2px;
+	display:block;
+	text-decoration:none;
+	font-family:"Times New Roman", Times, serif;
+}
+
+.character-panel.main-character .sample-voice ol li a:hover {
+	background-color:#930910;
+	cursor:pointer;
+}
+
+@media screen and (max-width: 1400px) {
+	.character-panel.main-character .sample-voice {
+	position:absolute;
+	top:280px;
+	left:205px;
+	width:650px;
+	height:30px;
+	}
+	.character-panel.main-character .sample-voice .audiojs  {
+	-webkit-transform: scale(0.8) !important; 
+    -moz-transform: scale(0.8) !important;
+	margin-right:-40px;
+	}
+	.character-panel.main-character .sample-voice ol {
+	-webkit-transform: scale(0.8);  
+    -moz-transform: scale(0.8);
+	}
+}
+
+/* サブキャラクター ------------------------------------------------------------------------*/
+
+.character-panel.sub-character {
+	width:100%;
+	height:auto;
+	min-height:960px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+	position:relative;
+}
+
+.character-panel.sub-character .character-name  {
+	width:800px;
+	height:120px;
+	position:absolute;
+	top:-145px;
+	left:228px;
+}
+
+.character-panel.sub-character .character-comment {
+	background:none;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+	border-top:4px solid #ffa302;
+	padding-top:35px;
+	padding-bottom:35px;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	font-size:18px;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+
+.character-panel.sub-character .character-comment .main-detail {
+	font-size:16px;
+	color:#222222;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	padding-left:230px;
+	width:45%;
+}
+
+.character-panel.sub-character.nostand .character-comment .main-detail {
+	font-size:16px;
+	color:#222222;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	padding-left:230px;
+	padding-right:50px;
+	width:auto;
+}
+
+.character-panel.sub-character .character-comment-nostand .main-detail {
+	width:auto;
+	padding-left:230px;
+	padding-right:50px;
+}
+
+@media screen and (max-width: 1400px) {
+	
+	.character-panel.sub-character .character-name  {
+	width:600px;
+	height:90px;
+	background-size:contain;
+	position:absolute;
+	top:-115px;
+	left:228px;
+}
+
+.character-panel.sub-character .character-comment {
+	background:none;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+	border-top:4px solid #ffa302;
+	padding-top:35px;
+	padding-bottom:35px;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	font-size:25px;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+
+.character-panel.sub-character .character-comment .main-detail {
+	font-size:14px;
+	color:#222222;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	padding-left:230px;
+	width:40%;
+}
+
+.character-panel.sub-character.nostand .character-comment .main-detail {
+	font-size:16px;
+	color:#222222;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	padding-left:230px;
+	padding-right:50px;
+	width:auto;
+}
+
+.character-panel.sub-character .character-comment-nostand .main-detail {
+	width:auto;
+	padding-left:230px;
+	padding-right:50px;
+}
+	
+}
+
+.character-panel.sub-character .sample-voice {
+	position:absolute;
+	left:405px;
+	top:-57px;
+	width:650px;
+	height:30px;
+}
+
+.character-panel.sub-character .sample-voice ol {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.character-panel.sub-character .sample-voice ol li a {
+	float:left;
+	width:30px;
+	height:30px;
+	background-color:#000000;
+	color:#ffffff;
+	line-height:30px;
+	font-size:18px;
+	text-align:center;
+	margin-right:2px;
+	display:block;
+	text-decoration:none;
+	font-family:"Times New Roman", Times, serif;
+}
+
+.character-panel.sub-character .sample-voice ol li a:hover {
+	background-color:#930910;
+	cursor:pointer;
+}
+
+@media screen and (max-width: 1400px) {
+	.character-panel.sub-character .sample-voice {
+	position:absolute;
+	top:-50px;
+	left:355px;
+	width:650px;
+	height:30px;
+	}
+	.character-panel.sub-character .sample-voice .audiojs  {
+	-webkit-transform: scale(0.8) !important; 
+    -moz-transform: scale(0.8) !important;
+	margin-right:-40px;
+	}
+	.character-panel.sub-character .sample-voice ol {
+	-webkit-transform: scale(0.8);  
+    -moz-transform: scale(0.8);
+	}
+}
+
+/* audio.js ------------------------------------------------------------------------*/
+
+	  .audiojs { height: 30px; background: #000000; width:180px; float:left; margin-right:5px; position:relative; z-index:700;}
+      .audiojs .play-pause { width: 18px; height: 30px; padding:0px; margin-top:5px; margin-left:4px; }
+      .audiojs p { width: 25px; height: 30px; margin: -3px 0px 0px -1px; }
+      .audiojs .scrubber { background: #383838; width:132px; height:7px; margin-top:11px;}
+      .audiojs .progress { height: 7px; width: 0px; background: #ffffff;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ccc), color-stop(0.5, #ddd), color-stop(0.51, #ccc), color-stop(1, #ccc));
+        background-image: -moz-linear-gradient(center top, #ccc 0%, #ddd 50%, #ccc 51%, #ccc 100%); }
+      .audiojs .loaded { height: 10px; background: #000;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.5, #333), color-stop(0.51, #222), color-stop(1, #222));
+        background-image: -moz-linear-gradient(center top, #222 0%, #333 50%, #222 51%, #222 100%); }
+      .audiojs .time { float: left; height: 25px; line-height: 30px; margin-left:-10px; display:none; }
+      .audiojs .error-message { height: 24px;line-height: 30px; }
+
+/* 右田双鉄 ------------------------------------------------------------------------*/
+
+#soutetsu {
+	background-image:url("back-19.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/soutetsu/back.jpg*/;
+}
+
+#soutetsu .character-name {
+	background-image:url("name-19.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/soutetsu/name.png*/;
+}
+
+#soutetsu .character-comment {
+}
+
+#soutetsu .stand-image.stand01 { background-image:url("stand01-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/soutetsu/stand01.png*/; }
+
+/* ハチロク ------------------------------------------------------------------------*/
+
+#hachiroku {
+	background-image:url("back-20.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/back.jpg*/;
+}
+
+#hachiroku .character-name {
+	background-image:url("name-20.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/name.png*/;
+}
+
+#hachiroku .character-comment {
+}
+
+#hachiroku .stand-image.stand01 { background-image:url("stand01-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/stand01.png*/; }
+#hachiroku .stand-image.stand02 { background-image:url("stand02.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/stand02.png*/; }
+#hachiroku .stand-image.stand03 { background-image:url("stand03.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/stand03.png*/; }
+#hachiroku .stand-image.stand04 { background-image:url("stand04.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/stand04.png*/; }
+#hachiroku .stand-image.stand05 { background-image:url("stand05.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/stand05.png*/; }
+#hachiroku .stand-image.stand06 { background-image:url("stand06-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/stand06.png*/; }
+#hachiroku .stand-image.stand07 { background-image:url("stand07-9.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hachiroku/stand07.png*/; }
+
+/* 右田日々姫 ------------------------------------------------------------------------*/
+
+#hibiki {
+	background-image:url("back-21.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/back.jpg*/;
+}
+
+#hibiki .character-name {
+	background-image:url("name-21.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/name.png*/;
+}
+
+#hibiki .character-comment {
+}
+
+#hibiki .stand-image.stand01 { background-image:url("stand01-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand01.png*/; }
+#hibiki .stand-image.stand02 { background-image:url("stand02-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand02.png*/; }
+#hibiki .stand-image.stand03 { background-image:url("stand03-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand03.png*/; }
+#hibiki .stand-image.stand04 { background-image:url("stand04-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand04.png*/; }
+#hibiki .stand-image.stand05 { background-image:url("stand05-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand05.png*/; }
+#hibiki .stand-image.stand06 { background-image:url("stand06-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand06.png*/; }
+#hibiki .stand-image.stand07 { background-image:url("stand07-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand07.png*/; }
+#hibiki .stand-image.stand08 { background-image:url("stand08-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand08.png*/; }
+#hibiki .stand-image.stand09 { background-image:url("stand09-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand09.png*/; }
+#hibiki .stand-image.stand10 { background-image:url("stand10-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand10.png*/; }
+#hibiki .stand-image.stand11 { background-image:url("stand11-1.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hibiki/stand11.png*/; }
+
+/* 雛衣ポーレット ------------------------------------------------------------------------*/
+
+#paulette {
+	background-image:url("back-22.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/back.jpg*/;
+}
+
+#paulette .character-name {
+	background-image:url("name-22.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/name.png*/;
+}
+
+#paulette .character-comment {
+}
+
+#paulette .stand-image.stand01 { background-image:url("stand01-8.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand01.png*/; }
+#paulette .stand-image.stand02 { background-image:url("stand02-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand02.png*/; }
+#paulette .stand-image.stand03 { background-image:url("stand03-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand03.png*/; }
+#paulette .stand-image.stand04 { background-image:url("stand04-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand04.png*/; }
+#paulette .stand-image.stand05 { background-image:url("stand05-2.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand05.png*/; }
+#paulette .stand-image.stand06 { background-image:url("stand06-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand06.png*/; }
+#paulette .stand-image.stand07 { background-image:url("stand07-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand07.png*/; }
+#paulette .stand-image.stand08 { background-image:url("stand08-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand08.png*/; }
+#paulette .stand-image.stand09 { background-image:url("stand09-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand09.png*/; }
+#paulette .stand-image.stand10 { background-image:url("stand10-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand10.png*/; }
+#paulette .stand-image.stand11 { background-image:url("stand11-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/paulette/stand11.png*/; }
+
+/* れいな ------------------------------------------------------------------------*/
+
+#reina {
+	background-image:url("back-23.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/reina/back.jpg*/;
+}
+
+#reina .character-name {
+	background-image:url("name-23.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/reina/name.png*/;
+}
+
+#reina .character-comment {
+}
+
+#reina .stand-image.stand01 { background-image:url("stand01-10.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/reina/stand01.png*/; }
+#reina .stand-image.stand02 { background-image:url("stand02-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/reina/stand02.png*/; }
+#reina .stand-image.stand03 { background-image:url("stand03-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/reina/stand03.png*/; }
+#reina .stand-image.stand04 { background-image:url("stand04-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/reina/stand04.png*/; }
+#reina .stand-image.stand05 { background-image:url("stand05-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/reina/stand05.png*/; }
+
+/* 右田真闇 ------------------------------------------------------------------------*/
+
+#makura {
+	background-image:url("back-24.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/back.jpg*/;
+}
+
+#makura .character-name {
+	background-image:url("name-24.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/name.png*/;
+}
+
+#makura .character-comment {
+}
+
+#makura .stand-button-cate01 {
+	width:665px;
+}
+
+#makura .stand-image.stand01 { background-image:url("stand01-12.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/stand01.png*/; }
+#makura .stand-image.stand02 { background-image:url("stand02-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/stand02.png*/; }
+#makura .stand-image.stand03 { background-image:url("stand03-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/stand03.png*/; }
+#makura .stand-image.stand04 { background-image:url("stand05-3.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/stand05.png*/; }
+#makura .stand-image.stand05 { background-image:url("stand04-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/stand04.png*/; }
+#makura .stand-image.stand06 { background-image:url("stand06-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/stand06.png*/; }
+#makura .stand-image.stand07 { background-image:url("stand07-11.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/makura/stand07.png*/; }
+
+/* 宝生稀咲 ------------------------------------------------------------------------*/
+
+#kisaki {
+	background-image:url("back-25.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/kisaki/back.jpg*/;
+}
+
+#kisaki .character-name {
+	background-image:url("name-25.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/kisaki/name.png*/;
+}
+
+#kisaki .character-comment {
+}
+
+#kisaki .stand-image.stand01 { background-image:url("stand01-14.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/kisaki/stand01.png*/; }
+#kisaki .stand-image.stand02 { background-image:url("stand02-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/kisaki/stand02.png*/; }
+#kisaki .stand-image.stand03 { background-image:url("stand03-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/kisaki/stand03.png*/; }
+#kisaki .stand-image.stand04 { background-image:url("stand04-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/kisaki/stand04.png*/; }
+#kisaki .stand-image.stand05 { background-image:url("stand05-4.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/kisaki/stand05.png*/; }
+#kisaki .stand-image.stand06 { background-image:url("stand06-11.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/kisaki/stand06.png*/; }
+
+/* 蓑笠凪 ------------------------------------------------------------------------*/
+
+#nagi {
+	background-image:url("back-26.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/back.jpg*/;
+}
+
+#nagi .character-name {
+	background-image:url("name-26.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/name.png*/;
+}
+
+#nagi .character-comment {
+}
+
+#nagi .stand-image.stand01 { background-image:url("stand01-16.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand01.png*/; }
+#nagi .stand-image.stand02 { background-image:url("stand02-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand02.png*/; }
+#nagi .stand-image.stand03 { background-image:url("stand03-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand03.png*/; }
+#nagi .stand-image.stand04 { background-image:url("stand04-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand04.png*/; }
+#nagi .stand-image.stand05 { background-image:url("stand05-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand05.png*/; }
+#nagi .stand-image.stand06 { background-image:url("stand06-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand06.png*/; }
+#nagi .stand-image.stand07 { background-image:url("stand07-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand07.png*/; }
+#nagi .stand-image.stand08 { background-image:url("stand08-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand08.png*/; }
+#nagi .stand-image.stand09 { background-image:url("stand09-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand09.png*/; }
+#nagi .stand-image.stand10 { background-image:url("stand10-5.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagi/stand10.png*/; }
+
+/* 早瀬ふかみ ------------------------------------------------------------------------*/
+
+#fukami {
+	background-image:url("back-27.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/back.jpg*/;
+}
+
+#fukami .character-name {
+	background-image:url("name-27.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/name.png*/;
+}
+
+#fukami .character-comment {
+}
+
+#fukami .stand-image.stand01 { background-image:url("stand01-24.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand01.png*/; }
+#fukami .stand-image.stand02 { background-image:url("stand02-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand02.png*/; }
+#fukami .stand-image.stand03 { background-image:url("stand03-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand03.png*/; }
+#fukami .stand-image.stand04 { background-image:url("stand04-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand04.png*/; }
+#fukami .stand-image.stand05 { background-image:url("stand05-6.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand05.png*/; }
+#fukami .stand-image.stand06 { background-image:url("stand06-9.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand06.png*/; }
+#fukami .stand-image.stand07 { background-image:url("stand07-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand07.png*/; }
+#fukami .stand-image.stand08 { background-image:url("stand08-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand08.png*/; }
+#fukami .stand-image.stand09 { background-image:url("stand09-7.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/fukami/stand09.png*/; }
+
+/* 登呂流湯主人 ------------------------------------------------------------------------*/
+
+#tororuyu {
+	background-image:url("back-28.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/tororuyu/back.jpg*/;
+}
+
+#tororuyu .character-name {
+	background-image:url("name-28.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/tororuyu/name.png*/;
+}
+
+#tororuyu .character-comment {
+}
+
+#tororuyu .stand-image.stand01 { background-image:url("stand01-25.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/tororuyu/stand01.png*/; }
+
+/* 宝生元忠 ------------------------------------------------------------------------*/
+
+#mototada {
+	background-image:url("back-29.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/mototada/back.jpg*/;
+}
+
+#mototada .character-name {
+	background-image:url("name-29.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/mototada/name.png*/;
+}
+
+#mototada .character-comment {
+}
+
+#mototada .stand-image.stand01 { background-image:url("stand01-26.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/mototada/stand01.png*/; }
+
+/* 蓑笠穣 ------------------------------------------------------------------------*/
+
+#minoru {
+	background-image:url("back-30.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/minoru/back.jpg*/;
+}
+
+#minoru .character-name {
+	background-image:url("name-30.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/minoru/name.png*/;
+}
+
+#minoru .character-comment {
+}
+
+#minoru .stand-image.stand01 { background-image:url("stand01-27.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/minoru/stand01.png*/; }
+
+/* 赤井清春 ------------------------------------------------------------------------*/
+
+#akai {
+	background-image:url("back-31.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/akai/back.jpg*/;
+}
+
+#akai .character-name {
+	background-image:url("name-31.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/akai/name.png*/;
+}
+
+#akai .character-comment {
+}
+
+#akai .stand-image.stand01 { background-image:url("stand01-28.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/akai/stand01.png*/; }
+
+/* 早瀬流 ------------------------------------------------------------------------*/
+
+#hayase {
+	background-image:url("back-32.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hayase/back.jpg*/;
+}
+
+#hayase .character-name {
+	background-image:url("name-32.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hayase/name.png*/;
+}
+
+#hayase .character-comment {
+}
+
+#hayase .stand-image.stand01 { background-image:url("stand01-29.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/hayase/stand01.png*/; }
+
+/* 浦上 ------------------------------------------------------------------------*/
+
+#urakami {
+	background-image:url("back-33.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/urakami/back.jpg*/;
+}
+
+#urakami .character-name {
+	background-image:url("name-33.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/urakami/name.png*/;
+}
+
+#urakami .character-comment {
+}
+
+#urakami .stand-image.stand01 { background-image:url("stand01-30.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/urakami/stand01.png*/; }
+
+/* 永山典子 ------------------------------------------------------------------------*/
+
+#nagayama {
+	background-image:url("back-34.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagayama/back.jpg*/;
+}
+
+#nagayama .character-name {
+	background-image:url("name-34.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagayama/name.png*/;
+}
+
+#nagayama .character-comment {
+}
+
+#nagayama .stand-image.stand01 { background-image:url("stand01-31.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/nagayama/stand01.png*/; }
+
+/* コン ------------------------------------------------------------------------*/
+
+#concon {
+	background-image:url("back-35.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/concon/back.jpg*/;
+}
+
+#concon .character-name {
+	background-image:url("name-35.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/concon/name.png*/;
+}
+
+#concon .character-comment {
+}
+
+/* ナビ ------------------------------------------------------------------------*/
+
+#navinavi {
+	background-image:url("back-36.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/navi/back.jpg*/;
+}
+
+#navinavi .character-name {
+	background-image:url("name-36.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/navi/name.png*/;
+}
+
+#navinavi .character-comment {
+}
+
+/* 加藤雀 ------------------------------------------------------------------------*/
+
+#suzume {
+	background-image:url("back-37.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/suzume/back.jpg*/;
+}
+
+#suzume .character-name {
+	background-image:url("name-37.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/suzume/name.png*/;
+}
+
+#suzume .character-comment {
+}
+
+/*--------------------------------------
+　GALERRY
+---------------------------------------*/
+
+#gallery {
+	width:100%;
+	padding-top:50px;
+	min-height:926px;
+	background-image:url("back-38.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/back.jpg*/;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+#gallery #gallery-window {
+	width:100%;
+	padding-top:50px;
+	padding-bottom:50px;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+}
+
+#gallery-inbox {
+	margin-left:233px;
+	padding-bottom:50px;
+	position:relative;
+}
+
+.gallery-tab {
+	position:absolute;
+	width:630px;
+	height:60px;
+	top:-76px;
+}
+
+.gallery-button01 a {
+	display:block;
+	background-image:url("tab-button01.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/tab-button01.png*/;
+	width:194px;
+	height:51px;
+	margin-right:18px;
+	float:left;
+}
+
+.gallery-button02 a {
+	display:block;
+	background-image:url("tab-button03.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/tab-button03.png*/;
+	width:194px;
+	height:51px;
+	margin-right:18px;
+	float:left;
+}
+
+.gallery-button01 a.active {
+	background-image:url("tab-button01_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/tab-button01_active.png*/;
+}
+
+.gallery-button02 a.active {
+	background-image:url("tab-button03_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/tab-button03_active.png*/;
+}
+
+.gallery-button01 a:hover {
+	background-image:url("tab-button01_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/tab-button01_on.png*/;
+}
+
+.gallery-button02 a:hover {
+	background-image:url("tab-button03_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/tab-button03_on.png*/;
+}
+
+.gallery-button01 a.active:hover {
+	background-image:url("tab-button01_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/tab-button01_active.png*/;
+}
+
+.gallery-button02 a.active:hover {
+	background-image:url("tab-button03_active.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/tab-button03_active.png*/;
+}
+
+.gallery-thum {
+	background-image:url("thum-back.gif")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/thum-back.gif*/;
+	width:300px;
+	height:220px;
+	float:left;
+	margin-right:30px;
+	margin-bottom:30px;
+	position:relative;
+	box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.24);
+}
+
+.gallery-overlay a {
+	position:absolute;
+	top:0;
+	left:0;
+	width:300px;
+	height:220px;
+	background-image:url("thum-overlay.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/thum-overlay.png*/;
+	background-repeat:no-repeat;
+	background-position:top;
+}
+
+.gallery-overlay a:hover {
+	background-image:url("thum-overlay_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/thum-overlay_on.png*/;
+}
+
+.gallery-thum .title {
+	color:#2a2a2a;
+	font-size:16px;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	text-align:center;
+	padding-top:10px;
+}
+
+.gallery-thum .emote a {
+	background-image:url("emote.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/emote.png*/;
+	position:absolute;
+	right:8px;
+	top:130px;
+	z-index:80;
+	width:67px;
+	height:32px;
+}
+
+.gallery-thum .emote a:hover {
+	background-image:url("emote_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/gallery/emote_on.png*/;
+}
+
+#gallery-masonary02 .gallery-thum {
+	width:290px;
+	height:164px;
+	float:left;
+	margin-right:30px;
+	margin-bottom:30px;
+	position:relative;
+	border:solid 5px #ffffff;
+	background-color:#ffffff;
+	box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.24);
+}
+
+#gallery-masonary02 .gallery-thum img {
+	width:290px;
+	height:auto;
+}
+
+#gallery-masonary02 .gallery-thum img:hover {
+	opacity:0.8;
+filter: alpha(opacity=80);
+-ms-filter: "alpha( opacity=80 )";
+}
+
+/*--------------------------------------
+　WORLD
+---------------------------------------*/
+
+#world-thum-primary {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:163px;
+	z-index:130;
+}
+
+#world-thum-overflow {
+	width:109%;
+	margin-left:-250px;
+}
+
+#world-thum {
+	margin-left:500px;
+}
+
+#world-thum ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:124px;
+}
+
+#world-thum ul li a {
+	float:left;
+	margin-right:1.5px;
+	margin-left:1.5px;
+	transition: 0.2s;
+	display:block;
+	border:solid 4px #ffffff;
+	margin-top:20px;
+}
+
+#world-thum ul li a:hover {
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	-o-transform: translateY(-10px);
+}
+
+.slick-prev {
+	position:absolute;
+	background:none;
+	background-image:url("left.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/left.png*/;
+	width:45px;
+	height:45px;
+	top:50px;
+	left:-55px;
+	display:block;
+	z-index:100;
+	text-indent:-9999px;
+	border:none;
+}
+
+.slick-next {
+	position:absolute;
+	background:none;
+	background-image:url("right.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/right.png*/;
+	width:45px;
+	height:45px;
+	top:50px;
+	right:-55px;
+	display:block;
+	z-index:100;
+	text-indent:-9999px;
+	border:none;
+}
+
+.prevPage:hover, .nextPage:hover {
+	cursor:pointer;
+}
+
+.prevPage:hover {
+	background-image:url("left_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/left_on.png*/;
+}
+
+.nextPage:hover {
+	background-image:url("right_on.png")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/character/right_on.png*/;
+}
+
+
+.world-panel {
+	width:100%;
+	height:auto;
+	min-height:960px;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+	position:relative;
+}
+
+.world-detail {
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+	border-top:4px solid #ffa302;
+	padding-top:35px;
+	padding-bottom:35px;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	font-size:18px;
+	font-weight:bold;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+
+.world-detail .inbox {
+	padding-left:220px;
+	padding-right:50px;
+}
+
+.world-detail .inbox .title {
+	font-size:36px;
+	color:#930910;
+	margin-bottom:0px;
+}
+
+/*--------------------------------------
+　PRODUCTS
+---------------------------------------*/
+
+#products-primary {
+	width:100%;
+	min-height:932px;
+	padding-top:50px;
+	padding-bottom:80px;
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+	background-image:url("back-39.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/products/back.jpg*/;
+	background-position:center;
+	background-attachment:fixed;
+	font-weight:bold;
+}
+
+#products-window {
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+	padding:50px;
+	font-size:18px;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+
+#products-window .inbox {
+	padding-left:200px;
+	padding-right:50px;
+}
+
+#products-window .inbox .separate {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#products-window .inbox .wide {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#products-window .inbox .title {
+	font-size:32px;
+	color:#930910;
+	margin-bottom:0px;
+}
+
+#products-window .inbox .contents {
+	margin-bottom:20px;
+}
+
+#products-window .inbox .left-list {
+	float:left;
+	width:48%;
+}
+
+#products-window .inbox .right-list {
+	float:right;
+	width:48%;
+}
+
+#products-window .inbox .subtitle {
+	background-color:#000000;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#323238+0,000000+100 */
+background: #323238; /* Old browsers */
+background: -moz-linear-gradient(top,  #323238 0%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#323238), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #323238 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #323238 0%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #323238 0%,#000000 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #323238 0%,#000000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323238', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	border-top:2px solid #930910;
+	height:60px;
+	line-height:60px;
+	color:#ffffff;
+	font-size:20px;
+	text-indent:20px;
+	margin-bottom:20px;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+/*--------------------------------------
+　DOWNLOAD
+---------------------------------------*/
+
+#download-primary {
+	width:100%;
+	min-height:932px;
+	padding-top:50px;
+	padding-bottom:80px;
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+	background-image:url("back-39.jpg")/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/contents/products/back.jpg*/;
+	background-position:center;
+	background-attachment:fixed;
+	font-weight:bold;
+}
+
+#download-window {
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+	padding:50px;
+	font-size:18px;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+
+#download-window .inbox {
+	padding-left:200px;
+	padding-right:50px;
+}
+
+#download-window .inbox .separate {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#download-window .inbox .wide {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#download-window .inbox .title {
+	font-size:24px;
+	color:#930910;
+	margin-bottom:0px;
+}
+
+#download-window .inbox .contents {
+	margin-bottom:20px;
+	font-size:15px;
+}
+
+#download-window .inbox .left-list {
+	float:left;
+	width:48%;
+}
+
+#download-window .inbox .right-list {
+	float:right;
+	width:48%;
+}
+
+#download-window .inbox .contents table {
+	width:100%;
+	margin-top:15px;
+}
+
+#download-window .inbox .contents table th {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfff4+0,e9e9ce+100;Wax+3D+%232 */
+background: #fcfff4; /* Old browsers */
+background: -moz-linear-gradient(top,  #fcfff4 0%, #e9e9ce 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfff4), color-stop(100%,#e9e9ce)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fcfff4 0%,#e9e9ce 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#e9e9ce',GradientType=0 ); /* IE6-9 */
+border-bottom:1px solid #ffffff;
+width:50%;
+padding:10px;
+font-size:14px;
+}
+
+#download-window .inbox .contents table td {
+	padding:10px;
+	background-color:#ffffff;
+}
+
+#download-window .inbox .contents table a {
+	color:#be121b;
+}
+
+#download-window .inbox .subtitle {
+	background-color:#000000;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#323238+0,000000+100 */
+background: #323238; /* Old browsers */
+background: -moz-linear-gradient(top,  #323238 0%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#323238), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #323238 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #323238 0%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #323238 0%,#000000 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #323238 0%,#000000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323238', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	border-top:2px solid #930910;
+	height:60px;
+	line-height:60px;
+	color:#ffffff;
+	font-size:20px;
+	text-indent:20px;
+	margin-bottom:20px;
+	text-shadow: 2px 2px 2px #000000;
+}

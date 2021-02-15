@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        ã€Œçˆ±ä¸Šç«è½¦ - PURE STATION -ã€ä¸­æ–‡å®˜æ–¹ç½‘ç«™ | Lose / HIKARI FIELD
+    </title>
+    <meta name="description" content="ã€Œçˆ±ä¸Šç«è½¦ - PURE STATION -ã€ä¸­æ–‡å®˜æ–¹ç½‘ç«™ | Lose / HIKARI FIELD">
+    <meta name="keywords" content="Lose,ã¾ã„ã¦ã¤ -PURE STATION-,ã‚‚ã®ã¹ã®,ã‚´ã‚¹ãƒ‡ãƒª,ADV,ãƒ‡ã‚¸ã‚¿ãƒ«ãƒãƒ™ãƒ«,ç¾å°‘å¥³,çˆ±ä¸Šç«è½¦ -PURE STATION-,HIKARI FIELD">
+    <meta name="viewport" content="width=1000">
+    <link href="normalize.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="animate.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="perfect-scrollbar.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/perfect-scrollbar.css" rel="stylesheet" type="text/css">
+    <link href="jquery.bxslider.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="jquery.fancybox.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/jquery.fancybox.css" media="(min-width:1001px)">
+    <link rel="stylesheet" href="jquery.fancybox-sp.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/jquery.fancybox-sp.css" media="(max-width:1000px)">
+    <link rel="stylesheet" href="style.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/style.css" media="(min-width:1001px)">
+    <link rel="stylesheet" href="style-resp.css" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/css/style-resp.css" media="(max-width:1000px)">
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="html5shiv.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="DD_belatedPNG_0.0.7a.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/DD_belatedPNG_0.0.7a.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('img, .transparent');
+    </script>
+    <![endif]-->
+
+    <script type="text/javascript" src="jquery.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var agent = navigator.userAgent;
+
+            if (agent.search(/iPhone/) != -1) {
+
+                $(function () {
+                    $('#loader').css('display', 'none');
+                    $('#primary').css('display', 'block');
+                    $('#topics').masonry({
+                        itemSelector: '.topics-list'
+                    });
+                });
+
+            } else if (agent.search(/iPad/) != -1) {
+
+                $(function () {
+                    $('#loader').css('display', 'none');
+                    $('#primary').css('display', 'block');
+                    $('#topics').masonry({
+                        itemSelector: '.topics-list'
+                    });
+                });
+
+            } else if (agent.search(/Android/) != -1) {
+
+                $(function () {
+                    $('#loader').css('display', 'none');
+                    $('#primary').css('display', 'block');
+                    $('#topics').masonry({
+                        itemSelector: '.topics-list'
+                    });
+                });
+
+            } else {
+
+                if (document.referrer.indexOf("damm") != -1) { //ãƒªãƒ•ã‚¡ãƒ©ã«ã‚¢ãƒ‰ãƒ¬ã‚¹ãŒå«ã¾ã‚Œã¦ã„ã‚‹ã‹ã€‚
+
+                    // ï¼’åº¦ç›®ä»¥é™ã®è¨ªå•æ™‚ã®å‡¦ç†
+                    $(function () {
+                        $('#loader').css('display', 'none');
+                        $('#primary').css('display', 'block');
+                        $('#topics').masonry({
+                            itemSelector: '.topics-list'
+                        });
+                    });
+
+                } else {
+
+                    // åˆå›è¨ªå•æ™‚ã®å‡¦ç†
+
+                    $(function () {
+                        Array.prototype.remove = function (element) {
+                            for (var i = 0; i < this.length; i++)
+                                if (this[i] == element) this.splice(i, 1);
+                        };
+                        // ãƒ—ãƒ¬ãƒ­ãƒ¼ãƒ‰é–¢æ•°
+                        function preload(images, progress) {
+                            var total = images.length;
+                            $(images).each(function () {
+                                var src = this;
+                                $('<img/>')
+                                    .attr('src', src)
+                                    .load(function () {
+                                        images.remove(src);
+                                        progress(total, total - images.length);
+                                    });
+                            });
+                        }
+                        // ç”»åƒã‚’ãƒ—ãƒªãƒ­ãƒ¼ãƒ‰
+                        preload([
+                            '01.jpg'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/01.jpg*/,
+                            '02_hachiroku.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/02_hachiroku.png*/,
+                            '02_flygrass.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/02_flygrass.png*/,
+                            '02_grass.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/02_grass.png*/,
+                            'logo.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/logo.png*/,
+                            'logo-back.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/logo-back.png*/,
+                            'spec.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/mainvisual/spec.png*/,
+                            'navi-back.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi-back.png*/,
+                            'navi01_off-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi01_off.png*/,
+                            'navi02_off-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi02_off.png*/,
+                            'navi03_off-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi03_off.png*/,
+                            'navi04_off-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi04_off.png*/,
+                            'navi05_off.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi05_off.png*/,
+                            'navi06_off.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi06_off.png*/,
+                            'navi07_off.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi07_off.png*/,
+                            'navi01_on-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi01_on.png*/,
+                            'navi02_on-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi02_on.png*/,
+                            'navi03_on-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi03_on.png*/,
+                            'navi04_on-1.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi04_on.png*/,
+                            'navi05_on.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi05_on.png*/,
+                            'navi06_on.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi06_on.png*/,
+                            'navi07_on.png'/*tpa=https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/navi/navi07_on.png*/
+                        ], function (total, loaded) {
+                            if (loaded >= total) {	// ã™ã¹ã¦èª­ã¿è¾¼ã‚“ã 
+                                $('#loader').fadeOut('fast', function () {
+                                    $('#primary').fadeIn('fast');
+
+                                    $('#topics').masonry({
+                                        itemSelector: '.topics-list'
+                                    });
+
+                                });
+
+                            } else {	// èª­ã¿è¾¼ã¿é€”ä¸­
+                                var percent = Math.ceil(100 * loaded / total);
+                                $('#load-text').html(percent + '%');
+                                $('#bar').css('width', percent + '%');
+                            }
+                        });
+
+                    });
+
+
+                };
+
+            }
+        });
+    </script>
+    <script src="smoothscroll.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/smoothscroll.js"></script>
+    <script src="smartrollover.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/smartrollover.js"></script>
+    <script src="masonry.pkgd.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/masonry.pkgd.min.js"></script>
+    <script src="perfect-scrollbar.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/perfect-scrollbar.js"></script>
+    <script src="jquery.fancybox.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/jquery.fancybox.js"></script>
+    <script src="jquery.bxslider.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/jquery.bxslider.min.js"></script>
+    <script src="wow.min.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
+    <script src="expression.js" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/js/expression.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <a name="#topback"></a>
+
+    <div id="loader">
+        <table width="100%" height="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="middle" align="center">
+                    <img src="load-logo01.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-logo01.png" class="wow bounceInDown" data-wow-delay="0s">
+                    <img src="load-logo02.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-logo02.png" class="wow bounceInDown" data-wow-delay="0.1s">
+                    <img src="load-logo03.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-logo03.png" class="wow bounceInDown" data-wow-delay="0.2s">
+                    <img src="load-logo04.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-logo04.png" class="wow bounceInDown" data-wow-delay="0.3s">
+                    <div id="bar"></div>
+                    <img src="load-text.png" tppabs="https://hikarifield.co.jp/purestation/wp-content/themes/maitetsu/image/load-text.png">
+                    <br>
+                    <span id="load-text">0 %</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="primary" style="display: none;">
+
+        <article>
+
+            <div class="navi-open"></div>
+            <nav class="wow slideInLeft">
+                <ul>
+                    <li class="navi01">
+                        <a href="index.html" tppabs="https://hikarifield.co.jp/purestation/index.html" class="active"></a>
+                    </li>
+                    <li class="navi02">
+                        <a href="story.html" tppabs="https://hikarifield.co.jp/purestation/story.html"></a>
+                    </li>
+                    <li class="navi03">
+                        <a href="character.html" tppabs="https://hikarifield.co.jp/purestation/character.html"></a>
+                    </li>
+                    <li class="navi04">
+                        <a href="gallery.html" tppabs="https://hikarifield.co.jp/purestation/gallery.html"></a>
+                    </li>
+                    <li class="navi05">
+                        <a href="world.html" tppabs="https://hikarifield.co.jp/purestation/world.html"></a>
+                    </li>
+                    <li class="navi06">
+                        <a href="download.html" tppabs="https://hikarifield.co.jp/purestation/download.html"></a>
+                    </li>
+                    <li class="navi07">
+                        <a href="products.html" tppabs="https://hikarifield.co.jp/purestation/products.html"></a>
+                    </li>
+                </ul>
+            </nav>
+            <section id="mainvisual">
+
+                <div id="absolute-contents">
+                    <div class="logo-back wow fadeInDownBig" data-wow-delay="0.5s"></div>
+                    <div class="logo wow bounceInDown" data-wow-delay="1s"></div>
+                    <div class="spec wow bounceInRight" data-wow-delay="2s"></div>
+                </div>
+
+                <!-- panel01 start -->
+                <div class="panel scene01">
+                    <div class="chara01 wow fadeInRight" data-wow-delay="1s"></div>
+                    <div class="grass wow fadeInLeft" data-wow-delay="1s"></div>
+                    <div class="flygrass wow fadeIn" data-wow-delay="1.5s"></div>
+                </div>
+                <!-- panel01 end -->
+
+            </section>
+
+            <div style="clear:both;"></div>
+
+        </article>
+
+        <div id="topics" class="wow fadeInDown" data-wow-delay="1.5s">
+
+            <!-- start -->
+            <div class="topics-list x3">
+                    <div class="topics-image">
+                        <a href="javascript:if(confirm('https://zhongchou.modian.com/item/49603.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://zhongchou.modian.com/item/49603.html'" tppabs="https://zhongchou.modian.com/item/49603.html" target="_blank" style="background-image:url(wp-content/uploads/2016/07/20190301.jpg);"></a>
+                    </div>
+                    <div class="comment">
+                        <p>
+                            <strong style="font-size:x-large;">
+                                <span style="font-size:large;">2019.03.01</span>ã€Šçˆ±ä¸Šç«è½¦-P.S-ã€‹å…¨æ–°å‘¨è¾¹ç‰¹å…¸é¢„å”®æ´»åŠ¨ç°å·²ç™»åœºï¼</strong>
+                            <br>
+                            <span>æœ¬æ¬¡æˆ‘ä»¬å¸¦æ¥äº†11ç§å…¨æ–°çš„åŸç”»å¸ˆç­¾åæ¿ã€4ç§å…¨æ–°çš„ä¸»é¢˜æŒ‚ç”»ä»¥åŠ1ç§å…¨æ–°çš„ç­‰èº«æŠ±æ•å¥—ï¼</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- end -->
+
+            <!-- start -->
+            <div class="topics-list x3">
+                    <div class="topics-image">
+                        <a href="javascript:if(confirm('https://item.taobao.com/item.htm?id=586745670614/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://item.taobao.com/item.htm?id=586745670614/'" tppabs="https://item.taobao.com/item.htm?id=586745670614/" target="_blank" style="background-image:url(wp-content/uploads/2016/07/20190205.jpg);"></a>
+                    </div>
+                    <div class="comment">
+                        <p>
+                            <strong style="font-size:x-large;">
+                                <span style="font-size:large;">2019.02.05</span>ã€Šçˆ±ä¸Šç«è½¦-P.S-ã€‹å››å¤§å‘¨è¾¹å·²ç™»é™†å®˜æ–¹ç½‘åº—ï¼</strong>
+                            <br>
+                            <span>ç­‰èº«æŠ±æ•å¥—ã€å…±å¯åºŠå•ã€3Dæ—‹è½¬æ°´æ™¶å°å’ŒPVCæ‰‹åŠå››å¤§å‘¨è¾¹çš„é€šè´©å¥—é¤ï¼</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- end -->
+
+            <!-- start -->
+            <div class="topics-list x3">
+                <div class="topics-image">
+                    <a href="javascript:if(confirm('https://store.steampowered.com/app/880950/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://store.steampowered.com/app/880950/'" tppabs="https://store.steampowered.com/app/880950/" target="_blank" style="background-image:url(wp-content/uploads/2016/07/20180921.jpg);"></a>
+                </div>
+                <div class="comment">
+                    <p>
+                        <strong style="font-size:x-large;">
+                            <span style="font-size:large;">2018.9.21</span>ã€Šçˆ±ä¸Šç«è½¦-P.S-ã€‹ç°å·²å‘å”®ï¼Œé¦–å‘¨è¶…å€¼ç‰¹æƒ ä¸­ï¼</strong>
+                        <br>
+                        <span>é¦–å‘¨ç‰¹å–ä¸­ï¼Œç‚¹å‡»å›¾ç‰‡å‰å¾€Steamå•†åº—æŠ¢è´­ã€Šçˆ±ä¸Šç«è½¦-Pure Station-ã€‹å›½é™…ä¸­æ–‡ç‰ˆï¼</span>
+                    </p>
+                </div>
+            </div>
+            <!-- end -->
+
+            <!-- start -->
+            <div class="topics-list x3">
+                <div class="topics-image">
+                    <a href="javascript:if(confirm('https://store.steampowered.com/app/880950/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://store.steampowered.com/app/880950/'" tppabs="https://store.steampowered.com/app/880950/" target="_blank" style="background-image:url(wp-content/uploads/2016/07/693_211_hibiki.jpg);"></a>
+                </div>
+                <div class="comment">
+                    <p>
+                        <strong style="font-size:x-large;">
+                            <span style="font-size:large;">2018.7.20</span>ã€Šçˆ±ä¸Šç«è½¦-P.S-ã€‹PCå›½é™…ä¸­æ–‡ä½“éªŒç‰ˆå·²ç»å‘å¸ƒï¼</strong>
+                        <br>
+                        <span>å‰å¾€Steamå•†åº—å…è´¹è·å–ã€Šçˆ±ä¸Šç«è½¦-Pure Station-ã€‹PCå›½é™…ä¸­æ–‡ä½“éªŒç‰ˆï¼</span>
+                    </p>
+                </div>
+            </div>
+            <!-- end -->
+
+            <!-- start -->
+            <div class="topics-list x3">
+                <div class="topics-image">
+                    <a href="javascript:if(confirm('https://zhongchou.modian.com/item/19365.html  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://zhongchou.modian.com/item/19365.html'" tppabs="https://zhongchou.modian.com/item/19365.html" target="_blank" style="background-image:url(wp-content/uploads/2016/07/693_211_po.jpg);"></a>
+                </div>
+                <div class="comment">
+                    <p>
+                        <strong style="font-size:x-large;">
+                            <span style="font-size:large;">2018.7.19</span> è¶…äººæ°”ä½œå“ã€Šçˆ±ä¸Šç«è½¦-P.S-ã€‹å·²æºè¶…è±ªåç‰¹å…¸è¿›ç«™ï¼</strong>
+                        <br>
+                        <span>æ—¥æœ¬äººæ°”å£°ä¼˜ã€æ­Œæ‰‹ï¼ŒåŸä½œç”»å¸ˆã€å‰§æœ¬äº²ç¬”ç­¾åä¸€åŒç™»åœºï¼æ›´æœ‰å¤§é‡ä¸­æ–‡ç‰ˆç‹¬å ç‰¹å…¸å‘¨è¾¹ä¸€èµ·æŠµè¾¾ï¼</span>
+                    </p>
+                </div>
+            </div>
+            <!-- end -->
+
+            <!-- start -->
+            <div class="topics-list x3">
+                <div class="topics-image">
+                    <a href="javascript:if(confirm('https://zhongchou.modian.com/p/update_detail/19365/12169  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://zhongchou.modian.com/p/update_detail/19365/12169'" tppabs="https://zhongchou.modian.com/p/update_detail/19365/12169" target="_blank" style="background-image:url(wp-content/uploads/2016/07/bn_693_211.jpg);"></a>
+                </div>
+                <div class="comment">
+                    <p>
+                        <strong style="font-size:x-large;">
+                            <span style="font-size:large;">2018.7.13</span> ã€Šçˆ±ä¸Šç«è½¦-Pure Station-ã€‹PCå›½é™…ä¸­æ–‡ç‰ˆåˆ¶ä½œå†³å®šï¼</strong>
+                        <br>
+                        <span>HIKARI FIELDæ­£å¼å®£å¸ƒï¼Œå°†åˆ¶ä½œå¹¶å‘è¡Œã€Šçˆ±ä¸Šç«è½¦-Pure Station-ã€‹PCå›½é™…ä¸­æ–‡ç‰ˆã€‚</span>
+                    </p>
+                </div>
+            </div>
+            <!-- end -->
+
+            <div style="clear:both;"></div>
+
+        </div>
+
+        <div id="footer">
+
+            <div id="cc">
+                Lose / HIKARI FIELD, Copyright 2018 All rights reserved.
+                <div class="topback" id="page-top">
+                    <a href="#topback" onclick="return false;"></a>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+
+            <div id="footer-contents">
+                <div class="brand-logo">
+                    <a class="lose_logo" href="javascript:if(confirm('http://maitetsucs.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://maitetsucs.com/'" tppabs="http://maitetsucs.com/" target="_blank"></a><a class="hf_logo" href="javascript:if(confirm('http://www.hikarifield.co.jp/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.hikarifield.co.jp/'" tppabs="http://www.hikarifield.co.jp/"
+                        target="_blank"></a>
+                </div>
+                <div class="logo">
+                    <a href="index.html" tppabs="https://hikarifield.co.jp/purestation/index.html"></a>
+                </div>
+                <div class="footer-navi">
+                    <a href="index.html" tppabs="https://hikarifield.co.jp/purestation/index.html">é¦–é¡µ</a> |
+                    <a href="story.html" tppabs="https://hikarifield.co.jp/purestation/story.html">æ•…äº‹ä»‹ç»</a> |
+                    <a href="character.html" tppabs="https://hikarifield.co.jp/purestation/character.html">ç™»åœºäººç‰©</a> |
+                    <a href="gallery.html" tppabs="https://hikarifield.co.jp/purestation/gallery.html">æ¸¸æˆç”»å»Š</a> |
+                    <a href="world.html" tppabs="https://hikarifield.co.jp/purestation/world.html">ä¸–ç•Œè§‚</a> |
+                    <a href="download.html" tppabs="https://hikarifield.co.jp/purestation/download.html">ç›¸å…³ä¸‹è½½</a> |
+                    <a href="products.html" tppabs="https://hikarifield.co.jp/purestation/products.html">äº§å“ä¿¡æ¯</a>
+                </div>
+                <div class="footer-spec">
+                    çˆ±ä¸Šç«è½¦
+                    <span>- PURE STATION -</span>
+                    <br> å‰§æœ¬ï¼šè¿›è¡Œè±¹ã€€åŸç”»ï¼šcuraã€€ä¸»é¢˜æ­Œï¼šä¸­æƒ å…‰åŸ
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- counter -->
+    <div style="display:none;">
+        <script type="text/javascript" src="cnzz-1.js" tppabs="http://hikarifield.co.jp/cnzz.js"></script>
+    </div>
+
+</body>
+
+</html>
